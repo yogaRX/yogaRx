@@ -5,6 +5,8 @@ namespace yogaRx.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
     internal sealed class Configuration : DbMigrationsConfiguration<yogaRx.Models.ApplicationDbContext>
     {
@@ -15,7 +17,7 @@ namespace yogaRx.Migrations
 
         protected override void Seed(yogaRx.Models.ApplicationDbContext context)
         {
-
+            
             context.Ailments.AddOrUpdate(p => p.AilmentName,
                new Ailment
                {
@@ -217,6 +219,32 @@ namespace yogaRx.Migrations
 
 
                     );
+            var cor = context.Poses.Single(item => item.PoseName == "Corpse Pose");
+            cor.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Depression"));                    
+            cor.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Headache"));
+            cor.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Insomnia"));
+
+            var legs = context.Poses.Single(item => item.PoseName == "Legs Up The Wall");
+            legs.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Headache"));
+            legs.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Depression"));
+            legs.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Insomnia"));
+
+            var epp = context.Poses.Single(item => item.PoseName == "Extended Puppy Dog Pose");
+            epp.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Headache"));
+            epp.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Anxiety"));
+
+            var seatff = context.Poses.Single(item => item.PoseName == "Seated Forward Fold");
+            seatff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Headache"));
+            seatff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Backache"));
+            seatff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "PMS"));
+            seatff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Sciatica"));
+            seatff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Insomnia"));
+
+
+
+
+
+
         }
         //  This method will be called after migrating to the latest version.
 
@@ -230,6 +258,5 @@ namespace yogaRx.Migrations
         //      new Person { FullName = "Rowan Miller" }
         //    );
         //
-    }
     }
 }
