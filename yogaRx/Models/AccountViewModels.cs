@@ -66,7 +66,7 @@ namespace yogaRx.Models
     {
         [Required]
         [StringLength(100)]
-        [Display(Name = "UserHandle")]
+        [Display(Name = "Username")]
         public string Username { get; set; }
 
         [Required]
