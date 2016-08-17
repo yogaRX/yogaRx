@@ -12,6 +12,7 @@ namespace yogaRx.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
+        public string UserHandle { get; set; }
         public string ProPhoto { get; set; }
 
         //Navigation
@@ -45,5 +46,6 @@ namespace yogaRx.Models
         public System.Data.Entity.DbSet<yogaRx.Models.Ailment> Ailments { get; set; }
 
         public System.Data.Entity.DbSet<yogaRx.Models.Rating> Ratings { get; set; }
+
     }
 }
