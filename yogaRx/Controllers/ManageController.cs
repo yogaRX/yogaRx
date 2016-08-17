@@ -74,6 +74,13 @@ namespace yogaRx.Controllers
             };
             return View(model);
         }
+        // POST: /Manage/Picture
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "ProPhoto")] ApplicationUser ApplicationUser)
+        {
+
+        }
 
         //
         // POST: /Manage/RemoveLogin
