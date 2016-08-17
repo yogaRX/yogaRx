@@ -45,7 +45,7 @@ namespace yogaRx.Migrations
                },
                new Ailment
                {
-                   AilmentName = "Carpal Tunnel",
+                   AilmentName = "Carpal Tunnel Syndrome",
                    AilmentDesc = "",
 
                },
@@ -123,7 +123,7 @@ namespace yogaRx.Migrations
                        },
                        new Pose
                        {
-                           PoseName = "Cat/ Cow Pose",
+                           PoseName = "Cat Cow Pose",
                            PoseDesc = "Begin on all fours, shoulders above your wrists and hips above your knees. Inhale drop your belly and look up to the sky coming into cow pose. Exhale bring your navel to your spine, pushing through the floor, rounding your spine and looking back to your thighs. Repeat this for as many cycles of breath that your body needs."+"\r\n"+ "Modification: Place a blanket under knees if sensitive."
                        },
                       new Pose
@@ -188,7 +188,7 @@ namespace yogaRx.Migrations
                        },
                        new Pose
                        {
-                           PoseName = "Table Top (Reverse Hands)",
+                           PoseName = "Table Top with Reversed Hands",
                            PoseDesc = "Begin on all fours, shoulders above your wrists, hips above your knees. Triceps wrap in turning your fingertips to face your knees. Inhale and on the exhale sink your sit bones to your heels until you feel a stretch in your wrists. Hold for a couple cycles of breath, increasing the time with every cycle"+"\n"+ "Modification: Fold a blanket and place it under your knees."
                        },
                        new Pose
@@ -224,6 +224,7 @@ namespace yogaRx.Migrations
 
 
                     );
+            context.SaveChanges();
             var cor = context.Poses.Single(item => item.PoseName == "Corpse Pose");
             cor.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Depression"));                    
             cor.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Headache"));
@@ -253,7 +254,7 @@ namespace yogaRx.Migrations
             dDog.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Sciatica"));
             dDog.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Headache"));
 
-            var catcow = context.Poses.Single(item => item.PoseName == "Cat/Cow Pose");
+            var catcow = context.Poses.Single(item => item.PoseName == "Cat Cow Pose");
             catcow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Anxiety"));
             catcow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Energizing"));
             catcow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Backache"));
@@ -274,7 +275,7 @@ namespace yogaRx.Migrations
             var pigeon = context.Poses.Single(item => item.PoseName == "Pigeon Pose");
             pigeon.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "PMS"));
 
-            var bond = context.Poses.Single(item => item.PoseName == "Bond Angle Pose");
+            var bond = context.Poses.Single(item => item.PoseName == "Bound Angle Pose");
             bond.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "PMS"));
             bond.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Anxiety"));
 
