@@ -269,6 +269,56 @@ namespace yogaRx.Migrations
             var pigeon = context.Poses.Single(item => item.PoseName == "Pigeon Pose");
             pigeon.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "PMS"));
 
+            var bond = context.Poses.Single(item => item.PoseName == "Bond Angle Pose");
+            bond.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "PMS"));
+            bond.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Anxiety"));
+
+            var creslun = context.Poses.Single(item => item.PoseName == "Crescent Lunge");
+            creslun.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Depression"));
+
+            var wilthing = context.Poses.Single(item => item.PoseName == "Wild Thing");
+            wilthing.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Depression"));
+
+            var fish = context.Poses.Single(item => item.PoseName == "Fish Pose");
+            fish.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "PMS"));
+            fish.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Anxiety"));
+
+            var plow = context.Poses.Single(item => item.PoseName == "Plow Pose");
+            plow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Insomnia"));
+
+            var tri = context.Poses.Single(item => item.PoseName == "Triangle Pose");
+            tri.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
+            tri.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Energizing"));
+
+            var revplan = context.Poses.Single(item => item.PoseName == "Reverse Plank");
+            revplan.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Sciatica"));
+            revplan.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Energizing"));
+
+            var chair = context.Poses.Single(item => item.PoseName == "Chair Pose");
+            chair.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Energizing"));
+
+            var tabtop = context.Poses.Single(item => item.PoseName == "Table Top with Reversed Hands");
+            tabtop.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Carpal Tunnel Syndrome"));
+
+            var eagle = context.Poses.Single(item => item.PoseName == "Eagle Arms");
+            eagle.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Carpal Tunnel Syndrome"));
+
+            var cowface = context.Poses.Single(item => item.PoseName == "Cow Face Arms");
+            cowface.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Carpal Tunnel Syndrome"));
+
+            var wrist = context.Poses.Single(item => item.PoseName == "Wrist Workout");
+            wrist.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Carpal Tunnel Syndrome"));
+
+            var dolp = context.Poses.Single(item => item.PoseName == "Dolphin Pose");
+            dolp.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Carpal Tunnel Syndrome"));
+
+            var war3 = context.Poses.Single(item => item.PoseName == "Warrior 3");
+            war3.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
+
+            var highmount = context.Poses.Single(item => item.PoseName == "High Mountaing (Side Bend)");
+            highmount.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
+
+
 
 
 
