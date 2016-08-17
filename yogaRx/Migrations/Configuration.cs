@@ -88,34 +88,39 @@ namespace yogaRx.Migrations
                     new Pose
                     {
                         PoseName = "Legs Up the Wall",
-                        PoseDesc = ""
+                        PoseDesc = "Viparita Karani" + "\r\n" + "Sit on the floor bringing your dominate (right or left) side to the wall, place your hand on the floor facing your fingertips to touch the wall and the heel of your hand to touch your outer hip. On an inhale place your hands behind you, as you exhale swing your legs up onto the wall, scooting your sit bones closer to the wall if you’re feeling far away. Take a deep inhale and on the exhale let your shoulder blades move into your back body while your arms and palms open up to the ceiling by your sides, relaxing your jaw and bringing your eyes to shut. Hold for 5 to 10 minutes." + "\r\n" + "Modification: Bring a bolster or pillow under lower back, keeping distance in between you and the wall if you’re feeling tight."
+
+
 
                     },
                     new Pose
                     {
                         PoseName = "Extended Puppy Pose",
-                        PoseDesc = ""
+                        PoseDesc = "Uttana Shishosana" + "\r\n" + "Begin on all fours, making sure  your shoulders are above your wrists and  your hips are above your knees. Inhale and as you exhale walk your hands slowly out in front of you, keeping your hips above your knees. Keeping active arms, slowly bring your forehead to a block, blanket, or the ground. Using every inhale to lengthen your spine and every exhale to bring your hips back over your knees. Hold for 10 cycles of breath."+"\r\n"+ "Modification: Place a blanket under your knees, rest forehead/upper body on a bolster or pillow."
+
+
                     },
                     new Pose
                     {
                         PoseName = "Seated Forward Fold",
-                        PoseDesc= ""
+                        PoseDesc= "Paschimottanasana"+"\r\n"+ "Sit on the floor with your legs straight (slight bend in the knee for tight hamstrings) out in front of you, inhale your arms up to the sky lengthening your spine, and rolling your shoulder blades into your back body, exhale slowly hinging at the hips folding forward till your hands reach your shins or feet. Breathe here using every inhale to lengthen the spine and exhale to fold a little deeper. Hold for 10 to 20 cycles of breath"+"\r\n"+ "Modification: Sit on a folded blanket to help give a little more space in the hips."
                     },
                       new Pose
                       {
                           PoseName = "Standing Forward Fold",
-                          PoseDesc = ""
+                          PoseDesc = "Uttanasana"+"\r\n"+ "Standing in mountain pose, bringing feet together or hip distance. Inhale your arms up to the sky bringing shoulder blades onto the back body, lengthening the spine. Exhale and slowly begin to hinge at the hips bringing your hands to your shins, the floor or grab ahold of opposite elbows. Hold for 10 to 20 cycles of breath." +"\r\n"+ "Modification: Slight bend in the knees for tight hamstrings, also will protect your lower back."
+
                       },
                        new Pose
                        {
                           PoseName = "Downward Facing Dog",
-                          PoseDesc = ""
+                          PoseDesc = "Adho Mukha Svanasana "+"\r\n"+ "Begin in child's pose, letting your hips sink to your heels while keeping active arms. Inhale curl your toes under and on the exhale lift your hips to the sky, pushing your chest toward your thighs. Triceps wrap in as your shoulder blades move onto your back body, tailbone lengthens toward your heels and heels press toward or into the earth. hold for 10 cycles of breath. "+"\r\n"+ "Modification: Place your forehead on a block, roll up a blanket to place under your heels if they don’t reach the ground, and taking a slight bend in the knees if your hamstrings are tight."
                        },
                        new Pose
                         {
                               PoseName = "Corpse Pose",
-                              PoseDesc = ""
-                        },
+                              PoseDesc = "Savasana"+"\r\n"+ "Lie on your back , spread your feet wider than your hips, letting them drop open to the sides. Bring your arms down by your sides, spreading them wider than your shoulders, opening your palms to the sky and bringing your eyes to close. Hold for as long as you need."+"\r\n"+ "Modification: Place rolled blanket under knees, place one hand on your chest and one on your belly."
+                       },
                        new Pose
                        {
                            PoseName = "Cat/ Cow Pose",
@@ -213,7 +218,7 @@ namespace yogaRx.Migrations
                        },
                        new Pose
                        {
-                           PoseName = "High Mountain (Side bend)",
+                           PoseName = "Crescent Moon",
                            PoseDesc = ""
                        }
 
@@ -315,8 +320,8 @@ namespace yogaRx.Migrations
             var war3 = context.Poses.Single(item => item.PoseName == "Warrior 3");
             war3.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
 
-            var highmount = context.Poses.Single(item => item.PoseName == "High Mountaing (Side Bend)");
-            highmount.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
+            var cresmoon = context.Poses.Single(item => item.PoseName == "Crescent Moon");
+            cresmoon.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
 
 
 
