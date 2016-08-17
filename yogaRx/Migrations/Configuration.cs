@@ -231,5 +231,5 @@ namespace yogaRx.Migrations
         //    );
         //
     }
-    }
+    
 }
