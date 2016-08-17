@@ -93,7 +93,7 @@ namespace yogaRx.Migrations
                     },
                     new Pose
                     {
-                        PoseName = "Extended Puppy Dog Pose",
+                        PoseName = "Extended Puppy Pose",
                         PoseDesc = ""
                     },
                     new Pose
@@ -229,7 +229,7 @@ namespace yogaRx.Migrations
             legs.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Depression"));
             legs.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Insomnia"));
 
-            var epp = context.Poses.Single(item => item.PoseName == "Extended Puppy Dog Pose");
+            var epp = context.Poses.Single(item => item.PoseName == "Extended Puppy Pose");
             epp.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Headache"));
             epp.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Anxiety"));
 
@@ -239,6 +239,44 @@ namespace yogaRx.Migrations
             seatff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "PMS"));
             seatff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Sciatica"));
             seatff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Insomnia"));
+
+            var stanff = context.Poses.Single(item => item.PoseName == "Standing Forward Fold");
+            stanff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Depression"));
+            stanff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Headache"));
+
+            var dDog = context.Poses.Single(item => item.PoseName == "Downward Facing Dog");
+            dDog.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Sciatica"));
+            dDog.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Headache"));
+
+            var catcow = context.Poses.Single(item => item.PoseName == "Cat/Cow Pose");
+            catcow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Anxiety"));
+            catcow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Energizing"));
+            catcow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Backache"));
+
+            var child = context.Poses.Single(item => item.PoseName == "Child's Pose");
+            child.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
+            child.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "PMS"));
+            child.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Backache"));
+
+            var suptwi = context.Poses.Single(item => item.PoseName == "Supine Twist");
+            suptwi.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
+
+            var loc = context.Poses.Single(item => item.PoseName == "Locust Pose");
+            loc.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Backache"));
+            loc.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Energizing"));
+            loc.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Sciatica"));
+
+            var pigeon = context.Poses.Single(item => item.PoseName == "Pigeon Pose");
+            pigeon.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "PMS"));
+
+
+
+
+
+
+
+
+
 
 
 
