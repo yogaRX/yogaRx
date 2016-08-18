@@ -9,6 +9,9 @@
 <div>
     <h4>Change your account settings</h4>
     <hr />
+    @using (Html.BeginForm("PictureChange", "Manage", "Post"))
+    {
+        @Html.AntiForgeryToken()
     <dl class="dl-horizontal">
         <dt>Profile picture</dt>
         <dd>
@@ -26,6 +29,7 @@
         </dd>
         
     </dl>
+    }
     <dl class="dl-horizontal">
         <dt>Password:</dt>
         <dd>
