@@ -18,13 +18,20 @@
             @Html.DisplayFor(model => model.AilmentName)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.AilmentDesc)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.AilmentDesc)
-        </dd>
+        </dd>*@
+        
+        @foreach (var item in Model.Poses)
+        {
+        <div>
+            @item.PoseName
+        </div>
+        }
 
     </dl>
 </div>
