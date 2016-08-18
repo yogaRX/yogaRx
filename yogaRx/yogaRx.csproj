@@ -29,7 +29,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -212,6 +212,14 @@
     <Compile Include="Migrations\201608171353101_username.Designer.cs">
       <DependentUpon>201608171353101_username.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608171540284_profile pic.cs" />
+    <Compile Include="Migrations\201608171540284_profile pic.Designer.cs">
+      <DependentUpon>201608171540284_profile pic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608181423064_trying things.cs" />
+    <Compile Include="Migrations\201608181423064_trying things.Designer.cs">
+      <DependentUpon>201608181423064_trying things.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ailment.cs" />
@@ -313,6 +321,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608171353101_username.resx">
       <DependentUpon>201608171353101_username.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608171540284_profile pic.resx">
+      <DependentUpon>201608171540284_profile pic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608181423064_trying things.resx">
+      <DependentUpon>201608181423064_trying things.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
