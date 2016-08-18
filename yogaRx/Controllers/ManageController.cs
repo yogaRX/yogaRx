@@ -7,12 +7,15 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using yogaRx.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace yogaRx.Controllers
 {
     [Authorize]
     public class ManageController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -49,6 +52,15 @@ namespace yogaRx.Controllers
                 _userManager = value;
             }
         }
+        private ApplicationUser CurrentUser
+        {
+            get
+            {
+                UserManager<ApplicationUser> UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+                ApplicationUser currentUser = UserManager.FindById(User.Identity.GetUserId());
+                return currentUser;
+            }
+        }
 
         //
         // GET: /Manage/Index
@@ -74,6 +86,19 @@ namespace yogaRx.Controllers
             };
             return View(model);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult PictureChange (string PictureLink)
+        {
+            //user.prophoto = picturelink
+            //TODO: Look up current application user's account object
+            CurrentUser.ProPhoto = PictureLink;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+            
+        }
+
 
         //
         // POST: /Manage/RemoveLogin
@@ -334,6 +359,7 @@ namespace yogaRx.Controllers
 #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
+       // public DbContext db;
 
         private IAuthenticationManager AuthenticationManager
         {
