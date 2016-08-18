@@ -58,11 +58,11 @@ namespace yogaRx
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "397277322131-u2eo5np3mie8ep7p6uai305kvfc76q5m.apps.googleusercontent.com",
+                ClientSecret = "p842cSqVKAo9IcMWuDjRcZ6p"
+            });
         }
     }
 }
