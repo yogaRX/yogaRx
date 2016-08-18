@@ -1,4 +1,5 @@
-﻿@model yogaRx.Models.Ailment
+﻿@model yogaRx.Models.Pose
+
 
 @{
     ViewBag.Title = "Details";
@@ -11,24 +12,33 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.AilmentName)
+           Pose Name
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AilmentName)
+            @Html.DisplayFor(model => model.PoseName)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AilmentDesc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AilmentDesc)
-        </dd>
-
     </dl>
 </div>
+
+
+
+@*<div>
+
+
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.PoseName)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.PoseName)
+    </dd>
+</dl>
+</div>*@
+
+
+
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.AilmentId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PoseId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
