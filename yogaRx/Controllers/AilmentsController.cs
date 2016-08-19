@@ -22,8 +22,6 @@ namespace yogaRx.Controllers
         }
 
     
-
-
         // GET: Ailments/Details/5
         public ActionResult Details(int? id)
         {

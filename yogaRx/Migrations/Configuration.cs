@@ -80,8 +80,6 @@ namespace yogaRx.Migrations
 
                }
 
-
-
                 );
 
                  context.Poses.AddOrUpdate(p => p.PoseName,
@@ -89,8 +87,6 @@ namespace yogaRx.Migrations
                     {
                         PoseName = "Legs Up the Wall",
                         PoseDesc = "Viparita Karani Sit on the floor bringing your dominate (right or left) side to the wall, place your hand on the floor facing your fingertips to touch the wall and the heel of your hand to touch your outer hip. On an inhale place your hands behind you, as you exhale swing your legs up onto the wall, scooting your sit bones closer to the wall if you’re feeling far away. Take a deep inhale and on the exhale let your shoulder blades move into your back body while your arms and palms open up to the ceiling by your sides, relaxing your jaw and bringing your eyes to shut. Hold for 5 to 10 minutes.\r\n Modification: Bring a bolster or pillow under lower back, keeping distance in between you and the wall if you’re feeling tight."
-
-
 
                     },
                     new Pose
@@ -224,6 +220,7 @@ namespace yogaRx.Migrations
 
 
                     );
+
 
             context.SaveChanges();
             var cor = context.Poses.Single(item => item.PoseName == "Corpse Pose");
