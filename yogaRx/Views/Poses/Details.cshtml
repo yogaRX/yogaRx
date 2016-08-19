@@ -33,6 +33,20 @@
         <dd>
             @Html.DisplayFor(model => model.Photo)
         </dd>
+       
+            <div>
+
+                @Html.RadioButtonFor(x => x.Ratings, "Positive", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.RadioButtonFor(x => x.Ratings, "Negative", new { htmlAttributes = new { @class = "form-control" } })
+
+                @*$("a.voteup").click(function(){
+                $.get("updatescore.php", {"id":"112","score":"1"}, function(response){
+                /* Do something with the response */
+                });
+                });*@
+
+            </div>
+        
 
     </dl>
 </div>
@@ -40,3 +54,6 @@
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.PoseId }) |*@
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+
+<script src="~/Scripts/jquery-3.1.0.min.js"></script>
