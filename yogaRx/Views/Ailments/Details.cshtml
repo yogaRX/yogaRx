@@ -29,10 +29,12 @@
         @foreach (var item in Model.Poses)
         {
         <div>
-            @item.PoseName
+            
+            @Html.ActionLink(item.PoseName,"Details", "Poses", new { id = item.PoseId }, null)
         </div>
         }
 
+      
     </dl>
 </div>
 <p>
