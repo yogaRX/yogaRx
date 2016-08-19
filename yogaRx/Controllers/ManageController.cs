@@ -86,6 +86,36 @@ namespace yogaRx.Controllers
             };
             return View(model);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ProfPhotoChange(HttpPostedFileBase upload)
+        {
+
+                if (upload != null )
+                {
+                    var avatar = new ApplicationUser
+                    {
+                        PhotoName = System.IO.Path.GetFileName(upload.FileName),
+                        FileType = FileType.Avatar,
+                        PhotoType = upload.ContentType
+                    };
+                    using (var reader = new System.IO.BinaryReader(upload.InputStream))
+                    {
+                        avatar.PhotoBytes = reader.ReadBytes(upload.ContentLength);
+                    }
+
+                    CurrentUser.PhotoName = avatar.PhotoName;
+                    CurrentUser.FileType = avatar.FileType;
+                    CurrentUser.PhotoType = avatar.PhotoType;
+                    CurrentUser.PhotoBytes = avatar.PhotoBytes;
+                }
+
+            
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]

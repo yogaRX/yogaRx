@@ -14,6 +14,10 @@ namespace yogaRx.Models
     {
         public string UserHandle { get; set; }
         public string ProPhoto { get; set; }
+        public string PhotoName { get; set; }
+        public string PhotoType { get; set; }
+        public byte[] PhotoBytes { get; set; }
+        public FileType FileType { get; set; }
 
         //Navigation
         public virtual ICollection<Rating> Ratings { get; set; }
