@@ -29,7 +29,8 @@
         @foreach (var item in Model.Poses)
         {
         <div>
-            @item.PoseName
+            @*@item.PoseName*@
+            @Html.ActionLink(item.PoseName,"Details", "Poses", new { id = item.PoseId }, null)
         </div>
         }
 
