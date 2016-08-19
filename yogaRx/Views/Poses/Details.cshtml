@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Details";
 }
-
+<link href="~/Content/Images.css" rel="stylesheet" />
 <h2>Details</h2>
 
 <div>
@@ -27,13 +27,14 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Photo)
-        </dt>
-
+            Photo
+         </dt>
+       @if (Model.Photo != null)
+       {
         <dd>
-            @Html.DisplayFor(model => model.Photo)
+            <img class="photosize" src="@Url.Content(Model.Photo)"  />
         </dd>
-       
+       }
             <div>
 
                 @Html.RadioButtonFor(x => x.Ratings, "Positive", new { htmlAttributes = new { @class = "form-control" } })

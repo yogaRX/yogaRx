@@ -86,25 +86,25 @@ namespace yogaRx.Migrations
                     new Pose
                     {
                         PoseName = "Legs Up the Wall",
-                        PoseDesc = "Viparita Karani Sit on the floor bringing your dominate (right or left) side to the wall, place your hand on the floor facing your fingertips to touch the wall and the heel of your hand to touch your outer hip. On an inhale place your hands behind you, as you exhale swing your legs up onto the wall, scooting your sit bones closer to the wall if you’re feeling far away. Take a deep inhale and on the exhale let your shoulder blades move into your back body while your arms and palms open up to the ceiling by your sides, relaxing your jaw and bringing your eyes to shut. Hold for 5 to 10 minutes.\r\n Modification: Bring a bolster or pillow under lower back, keeping distance in between you and the wall if you’re feeling tight."
-
+                        PoseDesc = "Viparita Karani Sit on the floor bringing your dominate (right or left) side to the wall, place your hand on the floor facing your fingertips to touch the wall and the heel of your hand to touch your outer hip. On an inhale place your hands behind you, as you exhale swing your legs up onto the wall, scooting your sit bones closer to the wall if you’re feeling far away. Take a deep inhale and on the exhale let your shoulder blades move into your back body while your arms and palms open up to the ceiling by your sides, relaxing your jaw and bringing your eyes to shut. Hold for 5 to 10 minutes.\r\n Modification: Bring a bolster or pillow under lower back, keeping distance in between you and the wall if you’re feeling tight.",
+                        Photo = "~\\Content\\images\\Legsupthewall1.jpg"
                     },
                     new Pose
                     {
                         PoseName = "Extended Puppy Pose",
-                        PoseDesc = "Uttana Shishosana" + "\r\n" + "Begin on all fours, making sure  your shoulders are above your wrists and  your hips are above your knees. Inhale and as you exhale walk your hands slowly out in front of you, keeping your hips above your knees. Keeping active arms, slowly bring your forehead to a block, blanket, or the ground. Using every inhale to lengthen your spine and every exhale to bring your hips back over your knees. Hold for 10 cycles of breath."+"\r\n"+ "Modification: Place a blanket under your knees, rest forehead/upper body on a bolster or pillow."
-
+                        PoseDesc = "Uttana Shishosana. Begin on all fours, making sure  your shoulders are above your wrists and  your hips are above your knees. Inhale and as you exhale walk your hands slowly out in front of you, keeping your hips above your knees. Keeping active arms, slowly bring your forehead to a block, blanket, or the ground. Using every inhale to lengthen your spine and every exhale to bring your hips back over your knees. Hold for 10 cycles of breath. Modification: Place a blanket under your knees, rest forehead/upper body on a bolster or pillow.",
+                        Photo = "~\\Content\\images\\extendedpuppydogpose2.jpg"
 
                     },
                     new Pose
                     {
                         PoseName = "Seated Forward Fold",
-                        PoseDesc= "Paschimottanasana"+"\r\n"+ "Sit on the floor with your legs straight (slight bend in the knee for tight hamstrings) out in front of you, inhale your arms up to the sky lengthening your spine, and rolling your shoulder blades into your back body, exhale slowly hinging at the hips folding forward till your hands reach your shins or feet. Breathe here using every inhale to lengthen the spine and exhale to fold a little deeper. Hold for 10 to 20 cycles of breath"+"\r\n"+ "Modification: Sit on a folded blanket to help give a little more space in the hips."
+                        PoseDesc= "Paschimottanasana. Sit on the floor with your legs straight (slight bend in the knee for tight hamstrings) out in front of you, inhale your arms up to the sky lengthening your spine, and rolling your shoulder blades into your back body, exhale slowly hinging at the hips folding forward till your hands reach your shins or feet. Breathe here using every inhale to lengthen the spine and exhale to fold a little deeper. Hold for 10 to 20 cycles of breath. Modification: Sit on a folded blanket to help give a little more space in the hips."
                     },
                       new Pose
                       {
                           PoseName = "Standing Forward Fold",
-                          PoseDesc = "Uttanasana"+"\r\n"+ "Standing in mountain pose, bringing feet together or hip distance. Inhale your arms up to the sky bringing shoulder blades onto the back body, lengthening the spine. Exhale and slowly begin to hinge at the hips bringing your hands to your shins, the floor or grab ahold of opposite elbows. Hold for 10 to 20 cycles of breath." +"\r\n"+ "Modification: Slight bend in the knees for tight hamstrings, also will protect your lower back."
+                          PoseDesc = "Uttanasana. Standing in mountain pose, bringing feet together or hip distance. Inhale your arms up to the sky bringing shoulder blades onto the back body, lengthening the spine. Exhale and slowly begin to hinge at the hips bringing your hands to your shins, the floor or grab ahold of opposite elbows. Hold for 10 to 20 cycles of breath. Modification: Slight bend in the knees for tight hamstrings, also will protect your lower back."
 
                       },
                        new Pose

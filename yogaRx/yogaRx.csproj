@@ -224,6 +224,14 @@
     <Compile Include="Migrations\201608191458264_profile picture advanced.Designer.cs">
       <DependentUpon>201608191458264_profile picture advanced.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608191816084_test-image.cs" />
+    <Compile Include="Migrations\201608191816084_test-image.Designer.cs">
+      <DependentUpon>201608191816084_test-image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608191842496_idk.cs" />
+    <Compile Include="Migrations\201608191842496_idk.Designer.cs">
+      <DependentUpon>201608191842496_idk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ailment.cs" />
@@ -238,6 +246,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images.css" />
     <Content Include="Content\images\boundankle.jpg" />
     <Content Include="Content\images\cat10.jpg" />
     <Content Include="Content\images\chair.jpg" />
@@ -379,6 +388,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608191458264_profile picture advanced.resx">
       <DependentUpon>201608191458264_profile picture advanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608191816084_test-image.resx">
+      <DependentUpon>201608191816084_test-image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608191842496_idk.resx">
+      <DependentUpon>201608191842496_idk.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
