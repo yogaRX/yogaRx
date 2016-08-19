@@ -220,9 +220,14 @@
     <Compile Include="Migrations\201608181423064_trying things.Designer.cs">
       <DependentUpon>201608181423064_trying things.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608191458264_profile picture advanced.cs" />
+    <Compile Include="Migrations\201608191458264_profile picture advanced.Designer.cs">
+      <DependentUpon>201608191458264_profile picture advanced.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ailment.cs" />
+    <Compile Include="Models\FileType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Pose.cs" />
@@ -327,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608181423064_trying things.resx">
       <DependentUpon>201608181423064_trying things.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608191458264_profile picture advanced.resx">
+      <DependentUpon>201608191458264_profile picture advanced.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
