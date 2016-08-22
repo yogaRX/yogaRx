@@ -232,6 +232,10 @@
     <Compile Include="Migrations\201608191842496_idk.Designer.cs">
       <DependentUpon>201608191842496_idk.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608221405546_added-photo.cs" />
+    <Compile Include="Migrations\201608221405546_added-photo.Designer.cs">
+      <DependentUpon>201608221405546_added-photo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ailment.cs" />
@@ -394,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608191842496_idk.resx">
       <DependentUpon>201608191842496_idk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608221405546_added-photo.resx">
+      <DependentUpon>201608221405546_added-photo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
