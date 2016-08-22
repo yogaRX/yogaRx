@@ -39,18 +39,21 @@
             }
         </dd>
        }
-            <div>
+            @*<div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> <span class="glyphicon glyphicon-thumbs-up"></span> 
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> <span class="glyphicon glyphicon-thumbs-down"></span> 
+                </label>
+                </div>*@
+               
 
-                @Html.RadioButtonFor(x => x.Ratings, "Positive", new { htmlAttributes = new { @class = "form-control" } })
-                @Html.RadioButtonFor(x => x.Ratings, "Negative", new { htmlAttributes = new { @class = "form-control" } })
 
-                @*$("a.voteup").click(function(){
-                $.get("updatescore.php", {"id":"112","score":"1"}, function(response){
-                /* Do something with the response */
-                });
-                });*@
+              
 
-            </div>
+        
+         
         
 
     </dl>

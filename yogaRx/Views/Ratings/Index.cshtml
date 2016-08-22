@@ -22,9 +22,24 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.SymbolRating)
+        </td>*@
+        <td>
+            @if (item.SymbolRating == 1)
+            {
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+            }
+            else if (item.SymbolRating == -1)
+            {
+                <span class="glyphicon glyphicon-thumbs-down"></span>
+            }
+            else
+            {
+                @Html.DisplayFor(modelItem => item.SymbolRating)
+            }
         </td>
+
         <td>
             @Html.DisplayFor(modelItem => item.TextReview)
         </td>

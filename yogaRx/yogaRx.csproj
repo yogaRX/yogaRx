@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=16.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.16.1.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -232,11 +236,9 @@
     <Compile Include="Migrations\201608191842496_idk.Designer.cs">
       <DependentUpon>201608191842496_idk.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Migrations\201608221405546_added-photo.cs" />
     <Compile Include="Migrations\201608221405546_added-photo.Designer.cs">
       <DependentUpon>201608221405546_added-photo.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -294,6 +296,7 @@
     <Content Include="Content\images\wristworkoutseven.jpg" />
     <Content Include="Content\images\wristworkoutsix.jpg" />
     <Content Include="Content\images\wristworkouttwo.jpg" />
+    <Content Include="Content\rating.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -401,10 +404,8 @@
     <EmbeddedResource Include="Migrations\201608191842496_idk.resx">
       <DependentUpon>201608191842496_idk.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Migrations\201608221405546_added-photo.resx">
       <DependentUpon>201608221405546_added-photo.cs</DependentUpon>
-
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
