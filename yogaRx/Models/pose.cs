@@ -17,6 +17,7 @@ namespace yogaRx.Models
         public string PoseName { get; set; }
         public string PoseDesc { get; set; }
         public string Photo { get; set; }
+        public string Photo1 { get; set; }
 
 
         //Navigation

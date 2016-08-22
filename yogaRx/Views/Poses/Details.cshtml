@@ -33,6 +33,10 @@
        {
         <dd>
             <img class="photosize" src="@Url.Content(Model.Photo)"  />
+            @if (Model.Photo1 != null)
+            {
+            <img class="photosize" src="@Url.Content(Model.Photo1)" />
+            }
         </dd>
        }
             <div>

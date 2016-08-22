@@ -232,9 +232,15 @@
     <Compile Include="Migrations\201608191842496_idk.Designer.cs">
       <DependentUpon>201608191842496_idk.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201608221527174_replaced-photo.cs" />
     <Compile Include="Migrations\201608221527174_replaced-photo.Designer.cs">
       <DependentUpon>201608221527174_replaced-photo.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201608221405546_added-photo.cs" />
+    <Compile Include="Migrations\201608221405546_added-photo.Designer.cs">
+      <DependentUpon>201608221405546_added-photo.cs</DependentUpon>
+>>>>>>> 837a0a28506789fcc101c6cdb8b1a4f50213e114
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -399,8 +405,13 @@
     <EmbeddedResource Include="Migrations\201608191842496_idk.resx">
       <DependentUpon>201608191842496_idk.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201608221527174_replaced-photo.resx">
       <DependentUpon>201608221527174_replaced-photo.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201608221405546_added-photo.resx">
+      <DependentUpon>201608221405546_added-photo.cs</DependentUpon>
+>>>>>>> 837a0a28506789fcc101c6cdb8b1a4f50213e114
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
