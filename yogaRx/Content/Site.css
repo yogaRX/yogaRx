@@ -1,13 +1,17 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    /*padding-top: 50px;
+    padding-bottom: 20px;*/
+    background-image: url(images/boundankle.jpg);
+    background-size: 53%;
+    
+    
 }
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
+/*.body-content {
     padding-left: 15px;
     padding-right: 15px;
-}
+}*/
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -21,4 +25,28 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+header {
+    /*background-image: url('../Images/tapestry-755294_960_720.jpg');*/
+    height: 150px; 
+    background-color: lightskyblue;
+    /*background-size: 100%;*/
+    background-position: center;
+    overflow: hidden;
+    /*position: absolute;*/
+}
+
+
+#headertitle{
+    font-family:'Palatino Linotype';
+    font-weight: 600;
+    font-size: 50px;
+    text-align:center;
+   
+}
+#lead {
+    font-family: Verdana;
+    font-size: 20px;
+    text-align:center;
+   
 }
