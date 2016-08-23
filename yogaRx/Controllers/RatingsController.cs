@@ -14,11 +14,17 @@ namespace yogaRx.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        //public object dataSet { get; private set; }
+      
+
         // GET: Ratings
         public ActionResult Index()
         {
+            
+
             return View(db.Ratings.ToList());
         }
+      
 
         // GET: Ratings/Details/5
         public ActionResult Details(int? id)
@@ -34,6 +40,8 @@ namespace yogaRx.Controllers
             }
             return View(rating);
         }
+     
+
 
         // GET: Ratings/Create
         public ActionResult Create()

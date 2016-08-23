@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-           Pose Description 
+            Pose Description
         </dt>
 
         <dd>
@@ -28,36 +28,35 @@
 
         <dt>
             Photo
-         </dt>
-       @if (Model.Photo != null)
-       {
-        <dd>
-            <img class="photosize" src="@Url.Content(Model.Photo)"  />
-            @if (Model.Photo1 != null)
-            {
-            <img class="photosize" src="@Url.Content(Model.Photo1)" />
-            }
-        </dd>
-       }
-            @*<div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-primary active">
-                    <input type="radio" name="options" id="option1" autocomplete="off" checked> <span class="glyphicon glyphicon-thumbs-up"></span> 
-                </label>
-                <label class="btn btn-primary">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> <span class="glyphicon glyphicon-thumbs-down"></span> 
-                </label>
-                </div>*@
-               
-
-
-              
-
-        
-         
-        
+        </dt>
+        @if (Model.Photo != null)
+        {
+            <dd>
+                <img class="photosize" src="@Url.Content(Model.Photo)" />
+                @if (Model.Photo1 != null)
+                {
+                    <img class="photosize" src="@Url.Content(Model.Photo1)" />
+                }
+            </dd>
+        }
 
     </dl>
 </div>
+
+@*<div class="col-md-10">
+    <span class="glyphicon glyphicon-thumbs-up">&nbsp;</span>@Html.RadioButtonFor(x => x.SymbolRating, "1", new { htmlAttributes = new { @class = "form-control" } })
+    <span class="glyphicon glyphicon-thumbs-down">&nbsp;</span>@Html.RadioButtonFor(x => x.SymbolRating, "-1", new { htmlAttributes = new { @class = "form-control" } })
+</div>*@
+            
+@*<div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-primary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> <span class="glyphicon glyphicon-thumbs-up"></span>
+    </label>
+    <label class="btn btn-primary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> <span class="glyphicon glyphicon-thumbs-down"></span>
+    </label>
+    </div>*@
+
 <p>
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.PoseId }) |*@
     @Html.ActionLink("Back to List", "Index")

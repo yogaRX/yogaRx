@@ -20,11 +20,10 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.SymbolRating)
-        </td>*@
+        
         <td>
             @if (item.SymbolRating == 1)
             {
@@ -38,17 +37,21 @@
             {
                 @Html.DisplayFor(modelItem => item.SymbolRating)
             }
+            
         </td>
-
+        
         <td>
             @Html.DisplayFor(modelItem => item.TextReview)
         </td>
+
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RatingId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RatingId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RatingId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.RatingId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.RatingId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.RatingId })
         </td>
     </tr>
+   
+
 }
 
 </table>
