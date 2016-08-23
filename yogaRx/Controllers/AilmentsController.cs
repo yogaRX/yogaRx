@@ -21,6 +21,8 @@ namespace yogaRx.Controllers
             return View(db.Ailments.ToList());
         }
 
+
+
     
         // GET: Ailments/Details/5
         public ActionResult Details(int? id)

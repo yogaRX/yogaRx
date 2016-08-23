@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Details";
 }
-
+<link href="~/Content/Images.css" rel="stylesheet" />
 <h2>Details</h2>
 
 <div>
@@ -17,25 +17,68 @@
         <dd>
             @Html.DisplayFor(model => model.AilmentName)
         </dd>
-
-        @*<dt>
+    </dl>
+    @*<dt>
             @Html.DisplayNameFor(model => model.AilmentDesc)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.AilmentDesc)
         </dd>*@
-        
-        @foreach (var item in Model.Poses)
+
+    @foreach (var item in Model.Poses)
+    {
+        if (item.Photo != null)
         {
-        <div>
-            
-            @Html.ActionLink(item.PoseName,"Details", "Poses", new { id = item.PoseId }, null)
-        </div>
+        <img class="small" src="@Url.Content(item.Photo)" />
         }
 
-      
-    </dl>
+        <div>
+            @Html.ActionLink(item.PoseName, "Details", "Poses", new { id = item.PoseId }, null)
+        </div>
+    }
+    @{
+        ViewBag.SelectablePoses = from item in Model.Poses
+                                  select item;
+
+        ViewBag.PoseList = new SelectList(ViewBag.SelectablePoses, "PoseName", "PoseName");
+    }
+ 
+    Write a comment:
+    @using (Html.BeginForm("PostComment", "Manage","Post" ))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Poses, "Poses", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("PoseList", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Poses, "", new { @class = "text-danger" })
+            </div>
+            
+             @*@Html.TextBoxFor(m => m.Poses, new { @class = "form-control" })*@
+            <label for="comment">Comment:</label>
+            <textarea type="Text" name="TextReview" class="form-control" rows="5" id="comment"></textarea>
+            <input type="submit" />
+
+        </div>
+    }
+    <div>
+        @foreach (var pose in Model.Poses)
+        {
+            foreach (var rating in pose.Ratings)
+            {
+                if (rating != null)
+                {
+                    <div>
+                        @rating.TextReview
+                    </div>
+
+                }
+            }
+        }
+    </div>
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.AilmentId }) |
