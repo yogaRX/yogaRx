@@ -86,6 +86,23 @@ namespace yogaRx.Controllers
             };
             return View(model);
         }
+
+        //POST: /ailments/details/comment
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult PostComment(string TextReview, Pose Pose)
+        {
+            Rating Comment = new Rating();
+            Comment.User = CurrentUser;
+            Comment.TextReview = TextReview;
+            Comment.Pose = Pose;
+
+            CurrentUser.Ratings.Add(Comment);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult ProfPhotoChange(HttpPostedFileBase upload)
@@ -117,17 +134,7 @@ namespace yogaRx.Controllers
 
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult PictureChange (string PictureLink)
-        {
-            //user.prophoto = picturelink
-            //TODO: Look up current application user's account object
-            CurrentUser.ProPhoto = PictureLink;
-            db.SaveChanges();
-            return RedirectToAction("Index");
-            
-        }
+
 
 
         //

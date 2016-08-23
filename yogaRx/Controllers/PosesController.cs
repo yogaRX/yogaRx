@@ -20,6 +20,8 @@ namespace yogaRx.Controllers
             return View(db.Poses.ToList());
         }
 
+
+
         // GET: Poses/Details/5
         public ActionResult Details(int? id)
         {
