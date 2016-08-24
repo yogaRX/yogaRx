@@ -26,8 +26,14 @@
             @Html.DisplayFor(model => model.AilmentDesc)
         </dd>*@
 
-    @foreach (var item in Model.Poses)
+    @foreach (yogaRx.Models.Pose item in ViewBag.Poses)
     {
+        if (item.Score != null)
+        {
+            <div> @item.Score  </div>
+        }
+
+
         if (item.Photo != null)
         {
         <img class="small" src="@Url.Content(item.Photo)" />

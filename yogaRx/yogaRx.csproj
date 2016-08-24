@@ -29,7 +29,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -240,6 +240,14 @@
     <Compile Include="Migrations\201608221405546_added-photo.Designer.cs">
       <DependentUpon>201608221405546_added-photo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608241344116_rating ailment.cs" />
+    <Compile Include="Migrations\201608241344116_rating ailment.Designer.cs">
+      <DependentUpon>201608241344116_rating ailment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608241459039_poseid.cs" />
+    <Compile Include="Migrations\201608241459039_poseid.Designer.cs">
+      <DependentUpon>201608241459039_poseid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ailment.cs" />
@@ -406,6 +414,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608221405546_added-photo.resx">
       <DependentUpon>201608221405546_added-photo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608241344116_rating ailment.resx">
+      <DependentUpon>201608241344116_rating ailment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608241459039_poseid.resx">
+      <DependentUpon>201608241459039_poseid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -189,7 +189,7 @@ namespace yogaRx.Migrations
                            PoseName = "Triangle Pose",
                            PoseDesc = "Utthita Trikonasana" + "\n" + "Begin standing, heel toe your feet 3-4 feet apart turning you right toes 90 degrees, making sure your right heel intersects with your left arch. Bring your arms out to a T on the inhale lengthen your spine, exhale sliding your right arm out in front of you bringing it to your shin, floor or hooking your two peace fingers around your big toe. Use every inhale to lengthen your spine, every exhale to broaden your collarbone and twist a little deeper. Hold for 10 cycles of breath. Repeat on opposite side.",
                            Photo = "~\\Content\\images\\triangle.jpg"
-                           
+
                        },
                        new Pose
                        {
@@ -354,67 +354,144 @@ namespace yogaRx.Migrations
             cresmoon.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
 
 
-            context.Ratings.AddOrUpdate(p => p.SymbolRating, 
+            context.Ratings.AddOrUpdate(p => p.RatingId,
 
                 new Rating
                 {
                     RatingId = 1,
                     SymbolRating = 1,
-                    TextReview = " ",
+                    TextReview = "This pose worked wonders for my back!",
+                    Pose = child,
+                    Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
                 },
                   new Rating
                   {
                       RatingId = 2,
                       SymbolRating = 1,
-                      TextReview = " ",
+                      TextReview = "Amazing",
+                      Pose = child,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
                   },
                   new Rating
                   {
                       RatingId = 3,
                       SymbolRating = -1,
                       TextReview = " ",
+                      Pose = catcow,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
                   },
                   new Rating
                   {
                       RatingId = 4,
                       SymbolRating = 1,
-                      TextReview = " ",
+                      TextReview = "Wonderful",
+                      Pose = child,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+
                   },
                  new Rating
                  {
                      RatingId = 5,
                      SymbolRating = -1,
                      TextReview = " ",
+                     Pose = catcow,
+                     Ailment = context.Ailments.Single(item => item.AilmentName == "Anxiety"),
+
+
                  },
                  new Rating
                  {
                      RatingId = 6,
                      SymbolRating = 1,
                      TextReview = " ",
+                     Pose = child,
+                     Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+
                  },
                    new Rating
                    {
                        RatingId = 7,
                        SymbolRating = -1,
                        TextReview = " ",
+                       Pose = plow,
+                       Ailment = context.Ailments.Single(item => item.AilmentName == "Insomnia"),
+
                    },
                   new Rating
                   {
                       RatingId = 8,
                       SymbolRating = 1,
-                      TextReview = " ",
+                      TextReview = "Best pose ever.",
+                      Pose = child,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+
                   },
                     new Rating
-                    {                       
+                    {
                         RatingId = 9,
                         SymbolRating = -1,
                         TextReview = " ",
+                        Pose = child,
+                        Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
                     },
                    new Rating
                    {
-                          RatingId = 10,
-                          SymbolRating = 1,
-                          TextReview = " ",
+                       RatingId = 10,
+                       SymbolRating = 1,
+                       TextReview = " ",
+                       Pose = child,
+                       Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                   },
+                   new Rating
+                   {
+                       RatingId = 11,
+                       SymbolRating = 1,
+                       TextReview = " ",
+                       Pose = child,
+                       Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                   },
+                   new Rating
+                   {
+                       RatingId = 12,
+                       SymbolRating = 1,
+                       TextReview = " ",
+                       Pose = child,
+                       Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                   },
+                   new Rating
+                   {
+                       RatingId = 13,
+                       SymbolRating = 1,
+                       TextReview = " ",
+                       Pose = child,
+                       Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                   },
+                   new Rating
+                   {
+                       RatingId = 14,
+                       SymbolRating = 1,
+                       TextReview = " ",
+                       Pose = child,
+                       Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                   },
+                   new Rating
+                   {
+                       RatingId = 15,
+                       SymbolRating = 1,
+                       TextReview = " ",
+                       Pose = child,
+                       Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
                    }
                 );
 

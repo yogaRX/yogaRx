@@ -29,5 +29,10 @@ namespace yogaRx.Models
         public virtual ICollection<Rating> Ratings { get; set; }
         public virtual ApplicationUser User { get; set; }
 
+        // Not mapped field
+        [NotMapped]
+        public double? Score { get; set; }
+
     }
+
 }

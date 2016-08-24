@@ -12,10 +12,13 @@ namespace yogaRx.Models
         public int RatingId { get; set; }
         public short? SymbolRating { get; set; }
         public string TextReview { get; set; }
+        public int PoseId { get; set; }
+
 
 
         //Navigation
         public virtual ApplicationUser User { get; set; }
         public virtual Pose Pose { get; set; }
+        public virtual Ailment Ailment { get; set; }
     }
 }
