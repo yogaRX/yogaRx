@@ -90,12 +90,13 @@ namespace yogaRx.Controllers
         //POST: /ailments/details/comment
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult PostComment(string TextReview, Pose Pose)
+        public ActionResult PostComment(string TextReview, int PoseList, int AilmentId)
         {
             Rating Comment = new Rating();
             Comment.User = CurrentUser;
             Comment.TextReview = TextReview;
-            Comment.Pose = Pose;
+            Comment.PoseId = PoseList;
+            Comment.AilmentId = AilmentId;
 
             CurrentUser.Ratings.Add(Comment);
             db.SaveChanges();
