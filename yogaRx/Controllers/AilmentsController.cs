@@ -15,10 +15,23 @@ namespace yogaRx.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Ailments
-        public ActionResult Index()
-        {
+        public ActionResult Index(string search)
         
-            return View(db.Ailments.ToList());
+        {
+            var ailments = from item in db.Ailments
+                           select item;
+
+            // filter
+            if (!String.IsNullOrEmpty(search))
+            {
+                ailments = from item in ailments
+                           where item.AilmentName.Contains(search)
+                           select item;
+
+
+            }
+
+            return View(ailments.ToList());
         }
 
     
