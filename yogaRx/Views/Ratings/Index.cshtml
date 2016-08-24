@@ -20,20 +20,38 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
+        
         <td>
-            @Html.DisplayFor(modelItem => item.SymbolRating)
+            @if (item.SymbolRating == 1)
+            {
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+            }
+            else if (item.SymbolRating == -1)
+            {
+                <span class="glyphicon glyphicon-thumbs-down"></span>
+            }
+            else
+            {
+                @Html.DisplayFor(modelItem => item.SymbolRating)
+            }
+            
         </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.TextReview)
         </td>
+
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RatingId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RatingId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RatingId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.RatingId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.RatingId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.RatingId })
         </td>
     </tr>
+   
+
 }
 
 </table>

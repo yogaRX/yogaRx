@@ -21,6 +21,8 @@ namespace yogaRx.Controllers
             return View(db.Ailments.ToList());
         }
 
+
+
     
         // GET: Ailments/Details/5
         public ActionResult Details(int? id)
@@ -34,6 +36,28 @@ namespace yogaRx.Controllers
             {
                 return HttpNotFound();
             }
+
+            var firstPose = ailment.Poses.Single(p => p.PoseName == "Child's Pose");
+            var firstPoseRatings = db.Ratings.Where(r => r.PoseId == firstPose.PoseId);
+            double? score = db.Ratings.Where(r => r.PoseId == firstPose.PoseId).Average(r => r.SymbolRating);
+
+
+            var poses = from p in ailment.Poses
+                        let Score = db.Ratings.Where(r => r.PoseId == p.PoseId).Average(r => r.SymbolRating)
+                        orderby Score descending
+                        select new Pose
+                        {
+                            PoseId = p.PoseId,
+                            PoseName = p.PoseName,
+                            PoseDesc = p.PoseDesc,
+                            Photo = p.Photo,
+                            Photo1 = p.Photo1,
+                            //Score = db.Ratings.Where(r => r.PoseId == p.PoseId).Average(r => r.SymbolRating)
+                            Score = Score
+
+                        };
+
+            ViewBag.Poses = poses;
             return View(ailment);
         }
 
