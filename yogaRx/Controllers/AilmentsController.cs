@@ -37,9 +37,9 @@ namespace yogaRx.Controllers
                 return HttpNotFound();
             }
 
-            var firstPose = ailment.Poses.Single(p => p.PoseName == "Child's Pose");
-            var firstPoseRatings = db.Ratings.Where(r => r.PoseId == firstPose.PoseId);
-            double? score = db.Ratings.Where(r => r.PoseId == firstPose.PoseId).Average(r => r.SymbolRating);
+            //var firstPose = ailment.Poses.Single(p => p.PoseName == "Child's Pose");
+            //var firstPoseRatings = db.Ratings.Where(r => r.PoseId == firstPose.PoseId);
+            //double? score = db.Ratings.Where(r => r.PoseId == firstPose.PoseId).Average(r => r.SymbolRating);
 
 
             var poses = from p in ailment.Poses
