@@ -1,17 +1,31 @@
 ﻿body {
-    /*padding-top: 50px;
-    padding-bottom: 20px;*/
-    background-image: url(images/boundankle.jpg);
-    background-size: 53%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color:burlywood;
+    background-size:80%
+  
+   
+    
+}
+#photo {
+    /*padding-top: 0px;*/
+    padding-bottom:400px;
+    background-image: url(images/coverphoto.jpg);
+    background-repeat:repeat-x;
+    background-size: 50%;
+    background-position:top;
+    
+    
     
     
 }
 
-/* Set padding to keep content from hitting the edges */
-/*.body-content {
+
+ Set padding to keep content from hitting the edges 
+.body-content {
     padding-left: 15px;
     padding-right: 15px;
-}*/
+}
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -26,14 +40,12 @@ select,
 textarea {
     max-width: 280px;
 }
-header {
-    /*background-image: url('../Images/tapestry-755294_960_720.jpg');*/
+#header {
+  
     height: 150px; 
-    background-color: lightskyblue;
-    /*background-size: 100%;*/
-    background-position: center;
+    background-color:lightcoral; 
     overflow: hidden;
-    /*position: absolute;*/
+
 }
 
 
@@ -50,3 +62,23 @@ header {
     text-align:center;
    
 }
+.navbar  {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 5px;
+    border-radius: 75px;
+    /*margin-bottom: 0px;*/
+    font-size: 15px;
+    letter-spacing: 3px;
+
+    
+}
+.justified {
+    position:absolute;
+    left:75%;
+}
+
+.navbar-nav li a:hover {
+    color:coral !important;
+}
+

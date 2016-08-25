@@ -247,11 +247,15 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images.css" />
+    <Content Include="Content\images\bluegood.jpg" />
     <Content Include="Content\images\boundankle.jpg" />
+    <Content Include="Content\images\brightlight.jpg" />
     <Content Include="Content\images\cat10.jpg" />
     <Content Include="Content\images\chair.jpg" />
     <Content Include="Content\images\childspose.jpg" />
     <Content Include="Content\images\corpsepose8.jpg" />
+    <Content Include="Content\images\coverimage.jpg" />
+    <Content Include="Content\images\coverphoto.jpg" />
     <Content Include="Content\images\cow9.jpg" />
     <Content Include="Content\images\cowface.jpg" />
     <Content Include="Content\images\cowfacetwo.jpg" />
@@ -262,6 +266,7 @@
     <Content Include="Content\images\eaglearms.jpg" />
     <Content Include="Content\images\extendedpuppydogpose2.jpg" />
     <Content Include="Content\images\fish.jpg" />
+    <Content Include="Content\images\imageback.jpg" />
     <Content Include="Content\images\Legsupthewall1.jpg" />
     <Content Include="Content\images\lotcuspose.jpg" />
     <Content Include="Content\images\pigeonpose.jpg" />
