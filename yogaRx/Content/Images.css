@@ -8,3 +8,12 @@
 .small{
     height:40px
 }
+
+.commentbox {
+    border-radius:25px;
+    background:#0094ff;
+    padding:10px; 
+        margin:10px;
+        width:auto;
+  
+}
