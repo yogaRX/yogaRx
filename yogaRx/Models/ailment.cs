@@ -14,6 +14,7 @@ namespace yogaRx.Models
         [MaxLength (50)]
         public string AilmentName { get; set; }
         public string AilmentDesc { get; set; }
+        public string BodyPartID { get; set; }
 
 
         //Navigation

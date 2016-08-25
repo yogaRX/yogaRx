@@ -1,0 +1,45 @@
+﻿@model IEnumerable<yogaRx.Models.Ailment>
+
+@{
+    ViewBag.Title = "ArmFilter";
+}
+
+<h2>ArmFilter</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AilmentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AilmentDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BodyPartID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AilmentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AilmentDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BodyPartID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AilmentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AilmentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AilmentId })
+        </td>
+    </tr>
+}
+
+</table>
