@@ -248,6 +248,10 @@
     <Compile Include="Migrations\201608241459039_poseid.Designer.cs">
       <DependentUpon>201608241459039_poseid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608241846393_link-ailment.cs" />
+    <Compile Include="Migrations\201608241846393_link-ailment.Designer.cs">
+      <DependentUpon>201608241846393_link-ailment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ailment.cs" />
@@ -420,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608241459039_poseid.resx">
       <DependentUpon>201608241459039_poseid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608241846393_link-ailment.resx">
+      <DependentUpon>201608241846393_link-ailment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

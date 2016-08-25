@@ -13,6 +13,7 @@ namespace yogaRx.Models
         public short? SymbolRating { get; set; }
         public string TextReview { get; set; }
         public int PoseId { get; set; }
+        public int AilmentId { get; set; }
 
 
 
