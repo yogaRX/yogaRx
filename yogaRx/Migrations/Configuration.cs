@@ -23,18 +23,24 @@ namespace yogaRx.Migrations
                {
                    AilmentName = "Depression",
                    AilmentDesc = "",
+                   BodyPartID = "Head",
 
                },
                new Ailment
                {
                    AilmentName = "Anxiety",
                    AilmentDesc = "",
+                   BodyPartID = "Head",
+
+
 
                },
                new Ailment
                {
                    AilmentName = "Insomnia",
                    AilmentDesc = "",
+                   BodyPartID = "Head",
+
 
                },
                new Ailment

@@ -16,13 +16,13 @@ namespace yogaRx.Controllers
         public ActionResult HeadFilter()
         {
             var ailments = from item in db.Ailments
-                           
+                           where item.BodyPartID.Contains("Head")
                            select item;
 
 
 
             return View(ailments.ToList());
-                       
+
         }
         // GET: Ailments
         public ActionResult Index(string search)

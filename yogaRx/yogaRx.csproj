@@ -256,6 +256,10 @@
     <Compile Include="Migrations\201608251527405_bodyparts.Designer.cs">
       <DependentUpon>201608251527405_bodyparts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608251601227_changing seed.cs" />
+    <Compile Include="Migrations\201608251601227_changing seed.Designer.cs">
+      <DependentUpon>201608251601227_changing seed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ailment.cs" />
@@ -388,6 +392,7 @@
     <Content Include="Views\Ailments\Details.cshtml" />
     <Content Include="Views\Ailments\Edit.cshtml" />
     <Content Include="Views\Ailments\Index.cshtml" />
+    <Content Include="Views\Ailments\HeadFilter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -435,6 +440,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608251527405_bodyparts.resx">
       <DependentUpon>201608251527405_bodyparts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251601227_changing seed.resx">
+      <DependentUpon>201608251601227_changing seed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
