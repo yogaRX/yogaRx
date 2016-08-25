@@ -39,22 +39,34 @@
                 }
             </dd>
         }
+       
 
     </dl>
 
 </div>
 
-
-@*<div class="col-md-10">
-    <span class="glyphicon glyphicon-thumbs-up">&nbsp;</span>@Html.RadioButtonFor(x => x.SymbolRating, "1", new { htmlAttributes = new { @class = "form-control" } })
-    <span class="glyphicon glyphicon-thumbs-down">&nbsp;</span>@Html.RadioButtonFor(x => x.SymbolRating, "-1", new { htmlAttributes = new { @class = "form-control" } })
-</div>*@
-            
-            
-<p>
-    @*@Html.ActionLink("Edit", "Edit", new { id = Model.PoseId }) |*@
-    @Html.ActionLink("Back to List", "Index")
-</p>
+@*@using (Html.BeginForm("PostThumbs", "Manage", "Post"))
+{
+    @Html.AntiForgeryToken()
+    @Html.Hidden("PoseId", Model.PoseId)*@
 
 
-<script src="~/Scripts/jquery-3.1.0.min.js"></script>
+@foreach (yogaRx.Models.Rating item in)
+{
+  
+        
+
+
+    }
+
+
+
+
+
+        <p>
+            @*@Html.ActionLink("Edit", "Edit", new { id = Model.PoseId }) |*@
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+
+
+        <script src="~/Scripts/jquery-3.1.0.min.js"></script>

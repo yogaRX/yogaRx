@@ -90,13 +90,14 @@ namespace yogaRx.Controllers
         //POST: /ailments/details/comment
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult PostComment(string TextReview, int PoseList, int AilmentId)
+        public ActionResult PostComment(string TextReview, int PoseList, int AilmentId, short SymbolRating)
         {
             Rating Comment = new Rating();
             Comment.User = CurrentUser;
             Comment.TextReview = TextReview;
             Comment.PoseId = PoseList;
             Comment.AilmentId = AilmentId;
+            Comment.SymbolRating = SymbolRating;
 
             CurrentUser.Ratings.Add(Comment);
             db.SaveChanges();
@@ -104,21 +105,7 @@ namespace yogaRx.Controllers
 
         }
 
-        //POST: /ailments/details/comment
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult PostThumbs(short SymbolRating, int PoseList, int AilmentId)
-        //{
-        //    Rating Thumbs = new Rating();
-        //    Thumbs.User = CurrentUser;
-        //    Thumbs.SymbolRating = SymbolRating;
-        //    Thumbs.PoseId = PoseId;
-
-        //    CurrentUser.Ratings.Add(Thumbs);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-
-        //}
+     
 
         [HttpPost]
         [ValidateAntiForgeryToken]
