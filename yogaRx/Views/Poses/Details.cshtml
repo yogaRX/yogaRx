@@ -45,24 +45,6 @@
 
 </div>
 
-@*@using (Html.BeginForm("PostThumbs", "Manage", "Post"))
-{
-    @Html.AntiForgeryToken()
-    @Html.Hidden("PoseId", Model.PoseId)*@
-
-
-@foreach (yogaRx.Models.Rating item in)
-{
-  
-        
-
-
-    }
-
-
-
-
-
         <p>
             @*@Html.ActionLink("Edit", "Edit", new { id = Model.PoseId }) |*@
             @Html.ActionLink("Back to List", "Index")
