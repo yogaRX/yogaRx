@@ -31,6 +31,7 @@
         if (item.Score != null)
         {
             <div> @item.Score  </div>
+         
         }
 
 
@@ -62,13 +63,20 @@
                 @Html.DropDownList("PoseList", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Poses, "", new { @class = "text-danger" })
             </div>
-            
+
+            <div class="col-md-10">
+                <span class="glyphicon glyphicon-thumbs-up">&nbsp;</span>@Html.RadioButton("SymbolRating", "1", new { htmlAttributes = new { @class = "form-control" } })
+                <span class="glyphicon glyphicon-thumbs-down">&nbsp;</span>@Html.RadioButton("SymbolRating", "-1", new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
              @*@Html.TextBoxFor(m => m.Poses, new { @class = "form-control" })*@
             <label for="comment">Comment:</label>
             <textarea type="Text" name="TextReview" class="form-control" rows="5" id="comment"></textarea>
             <input type="submit" />
-
         </div>
+
+        
+
     }
     <div>
         @foreach (var pose in Model.Poses)
