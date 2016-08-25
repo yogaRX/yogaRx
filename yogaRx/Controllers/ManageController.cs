@@ -103,6 +103,22 @@ namespace yogaRx.Controllers
 
         }
 
+        //POST: /ailments/details/comment
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult PostThumbs(short SymbolRating, int PoseList, int AilmentId)
+        //{
+        //    Rating Thumbs = new Rating();
+        //    Thumbs.User = CurrentUser;
+        //    Thumbs.SymbolRating = SymbolRating;
+        //    Thumbs.PoseId = PoseId;
+
+        //    CurrentUser.Ratings.Add(Thumbs);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+
+        //}
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult ProfPhotoChange(HttpPostedFileBase upload)
