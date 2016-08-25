@@ -17,10 +17,10 @@
 </div>
 <map name="bodyparts">
     <area shape="rect" alt="head" coords="74,53,93,7" href="@Url.Action("HeadFilter","Ailments")"/>
-    <area shape="rect" alt="trunk" coords="53,63,114,178" href="~/Views/Ailments/Index.cshtml"/>
-    <area shape="rect" alt="legs" coords="50,178,121,335" href="~/Views/Ailments/Index.cshtml"/>
-    <area shape="rect" alt="leftArm" coords="10,191,51,63" href="~/Views/Ailments/Index.cshtml"/>
-    <area shape="rect" alt="rightArm" coords="116,163,164,61" href="~/Views/Ailments/Index.cshtml"/>
+    <area shape="rect" alt="trunk" coords="53,63,114,178" href="@Url.Action("TrunkFilter","Ailments")"/>
+    <area shape="rect" alt="legs" coords="50,178,121,335" href="@Url.Action("LegFilter","Ailments")"/>
+    <area shape="rect" alt="leftArm" coords="10,191,51,63" href="@Url.Action("ArmFilter","Ailments")"/>
+    <area shape="rect" alt="rightArm" coords="116,163,164,61" href="@Url.Action("ArmFilter","Ailments")"/>
 
 </map>
 <img src="~/Content/images/body.png" usemap="bodyparts" />

@@ -47,24 +47,28 @@ namespace yogaRx.Migrations
                {
                    AilmentName = "Digestion",
                    AilmentDesc = "",
+                   BodyPartID = "Trunk",
 
                },
                new Ailment
                {
                    AilmentName = "Carpal Tunnel Syndrome",
                    AilmentDesc = "",
+                   BodyPartID = "Arms",
 
                },
                new Ailment
                {
                    AilmentName = "Sciatica",
                    AilmentDesc = "",
+                   BodyPartID = "Legs",
 
                },
                new Ailment
                {
-                   AilmentName = "Energizing",
+                   AilmentName = "Fatigue",
                    AilmentDesc = "",
+                   BodyPartID = "Trunk",
 
                },
                new Ailment
@@ -78,12 +82,14 @@ namespace yogaRx.Migrations
                {
                    AilmentName = "Backache",
                    AilmentDesc = "",
+                   BodyPartID = "Trunk",
 
                },
                new Ailment
                {
                    AilmentName = "PMS",
                    AilmentDesc = "",
+                   BodyPartID = "Trunk",
 
                }
 
@@ -292,7 +298,7 @@ namespace yogaRx.Migrations
 
             var catcow = context.Poses.Single(item => item.PoseName == "Cat Cow Pose");
             catcow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Anxiety"));
-            catcow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Energizing"));
+            catcow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Fatigue"));
             catcow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Backache"));
 
             var child = context.Poses.Single(item => item.PoseName == "Child's Pose");
@@ -305,7 +311,7 @@ namespace yogaRx.Migrations
 
             var loc = context.Poses.Single(item => item.PoseName == "Locust Pose");
             loc.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Backache"));
-            loc.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Energizing"));
+            loc.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Fatigue"));
             loc.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Sciatica"));
 
             var pigeon = context.Poses.Single(item => item.PoseName == "Pigeon Pose");
@@ -330,14 +336,14 @@ namespace yogaRx.Migrations
 
             var tri = context.Poses.Single(item => item.PoseName == "Triangle Pose");
             tri.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
-            tri.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Energizing"));
+            tri.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Fatigue"));
 
             var revplan = context.Poses.Single(item => item.PoseName == "Reverse Plank");
             revplan.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Sciatica"));
-            revplan.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Energizing"));
+            revplan.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Fatigue"));
 
             var chair = context.Poses.Single(item => item.PoseName == "Chair Pose");
-            chair.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Energizing"));
+            chair.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Fatigue"));
 
             var tabtop = context.Poses.Single(item => item.PoseName == "Table Top with Reversed Hands");
             tabtop.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Carpal Tunnel Syndrome"));

@@ -248,17 +248,9 @@
     <Compile Include="Migrations\201608241459039_poseid.Designer.cs">
       <DependentUpon>201608241459039_poseid.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608241846393_link-ailment.cs" />
-    <Compile Include="Migrations\201608241846393_link-ailment.Designer.cs">
-      <DependentUpon>201608241846393_link-ailment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608251527405_bodyparts.cs" />
-    <Compile Include="Migrations\201608251527405_bodyparts.Designer.cs">
-      <DependentUpon>201608251527405_bodyparts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608251601227_changing seed.cs" />
-    <Compile Include="Migrations\201608251601227_changing seed.Designer.cs">
-      <DependentUpon>201608251601227_changing seed.cs</DependentUpon>
+    <Compile Include="Migrations\201608251717028_bodymap.cs" />
+    <Compile Include="Migrations\201608251717028_bodymap.Designer.cs">
+      <DependentUpon>201608251717028_bodymap.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -393,6 +385,9 @@
     <Content Include="Views\Ailments\Edit.cshtml" />
     <Content Include="Views\Ailments\Index.cshtml" />
     <Content Include="Views\Ailments\HeadFilter.cshtml" />
+    <Content Include="Views\Ailments\TrunkFilter.cshtml" />
+    <Content Include="Views\Ailments\ArmFilter.cshtml" />
+    <Content Include="Views\Ailments\LegFilter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -435,14 +430,8 @@
     <EmbeddedResource Include="Migrations\201608241459039_poseid.resx">
       <DependentUpon>201608241459039_poseid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608241846393_link-ailment.resx">
-      <DependentUpon>201608241846393_link-ailment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608251527405_bodyparts.resx">
-      <DependentUpon>201608251527405_bodyparts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608251601227_changing seed.resx">
-      <DependentUpon>201608251601227_changing seed.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608251717028_bodymap.resx">
+      <DependentUpon>201608251717028_bodymap.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

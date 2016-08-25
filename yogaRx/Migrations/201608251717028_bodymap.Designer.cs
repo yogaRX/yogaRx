@@ -7,13 +7,13 @@ namespace yogaRx.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class changingseed : IMigrationMetadata
+    public sealed partial class bodymap : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(changingseed));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(bodymap));
         
         string IMigrationMetadata.Id
         {
-            get { return "201608251601227_changing seed"; }
+            get { return "201608251717028_bodymap"; }
         }
         
         string IMigrationMetadata.Source
