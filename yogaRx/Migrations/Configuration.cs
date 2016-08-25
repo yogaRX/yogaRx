@@ -65,6 +65,7 @@ namespace yogaRx.Migrations
                {
                    AilmentName = "Headache",
                    AilmentDesc = "",
+                   BodyPartID = "Head",
 
                },
                new Ailment

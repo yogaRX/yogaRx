@@ -13,7 +13,17 @@ namespace yogaRx.Controllers
     public class AilmentsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        public ActionResult HeadFilter()
+        {
+            var ailments = from item in db.Ailments
+                           
+                           select item;
 
+
+
+            return View(ailments.ToList());
+                       
+        }
         // GET: Ailments
         public ActionResult Index(string search)
         
