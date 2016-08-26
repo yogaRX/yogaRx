@@ -115,6 +115,7 @@ namespace yogaRx.Controllers
         }
 
         // GET: Ailments/Create
+        [Authorize(Roles = "canEdit")]
         public ActionResult Create()
         {
             return View();
@@ -138,6 +139,7 @@ namespace yogaRx.Controllers
         }
 
         // GET: Ailments/Edit/5
+        [Authorize(Roles = "canEdit")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -169,6 +171,7 @@ namespace yogaRx.Controllers
         }
 
         // GET: Ailments/Delete/5
+        [Authorize(Roles = "canEdit")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
