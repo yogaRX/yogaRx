@@ -248,9 +248,9 @@
     <Compile Include="Migrations\201608241459039_poseid.Designer.cs">
       <DependentUpon>201608241459039_poseid.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608251717028_bodymap.cs" />
-    <Compile Include="Migrations\201608251717028_bodymap.Designer.cs">
-      <DependentUpon>201608251717028_bodymap.cs</DependentUpon>
+    <Compile Include="Migrations\201608261440031_fixing.cs" />
+    <Compile Include="Migrations\201608261440031_fixing.Designer.cs">
+      <DependentUpon>201608261440031_fixing.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -430,8 +430,8 @@
     <EmbeddedResource Include="Migrations\201608241459039_poseid.resx">
       <DependentUpon>201608241459039_poseid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608251717028_bodymap.resx">
-      <DependentUpon>201608251717028_bodymap.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608261440031_fixing.resx">
+      <DependentUpon>201608261440031_fixing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
