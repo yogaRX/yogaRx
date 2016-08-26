@@ -1,9 +1,28 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color:burlywood;
+    background-size:80%
+  
+   
+    
+}
+/*This is a change*/
+#photo {
+    /*padding-top: 0px;*/
+    padding-bottom:400px;
+    background-image: url(images/coverphoto.jpg);
+    background-repeat:repeat-x;
+    background-size: 50%;
+    background-position:top;
+    
+    
+    
+    
 }
 
-/* Set padding to keep content from hitting the edges */
+
+ Set padding to keep content from hitting the edges 
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -22,3 +41,49 @@ select,
 textarea {
     max-width: 280px;
 }
+#header {
+  
+    height: 150px; 
+    background-color:lightcoral; 
+    overflow: hidden;
+
+}
+
+
+#headertitle{
+    font-family:'Palatino Linotype';
+    font-weight: 600;
+    font-size: 50px;
+    text-align:center;
+   
+}
+#lead {
+    font-family: Verdana;
+    font-size: 20px;
+    text-align:center;
+   
+}
+.navbar  {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 5px;
+    border-radius: 75px;
+    /*margin-bottom: 0px;*/
+    font-size: 15px;
+    letter-spacing: 3px;
+
+    
+}
+.justified {
+    position:absolute;
+    left:75%;
+}
+
+.navbar-default a:hover {
+    color:coral !important;
+}
+#disclaimer{
+    font-size:10px;
+}
+
+1 Comment Collapse

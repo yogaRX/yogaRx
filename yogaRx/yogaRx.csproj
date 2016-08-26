@@ -408,6 +408,7 @@
     <Content Include="Views\Ailments\TrunkFilter.cshtml" />
     <Content Include="Views\Ailments\ArmFilter.cshtml" />
     <Content Include="Views\Ailments\LegFilter.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
