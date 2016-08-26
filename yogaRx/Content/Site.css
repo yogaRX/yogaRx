@@ -78,7 +78,10 @@ textarea {
     left:75%;
 }
 
-.navbar-nav li a:hover {
+.navbar-default a:hover {
     color:coral !important;
+}
+#disclaimer{
+    font-size:10px;
 }
 
