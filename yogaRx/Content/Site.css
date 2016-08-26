@@ -85,5 +85,19 @@ textarea {
 #disclaimer{
     font-size:10px;
 }
+.photosize{
+    height:350px
+}
 
-1 Comment Collapse
+.small{
+    height:40px
+}
+
+.commentbox {
+    border-radius:25px;
+    background:#0094ff;
+    padding:10px; 
+        margin:10px;
+        width:auto;
+  
+}
