@@ -9,6 +9,7 @@ using Microsoft.Owin.Security;
 using yogaRx.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
+using System.Collections.Generic;
 
 namespace yogaRx.Controllers
 {
@@ -62,6 +63,8 @@ namespace yogaRx.Controllers
             }
         }
 
+
+
         //
         // GET: /Manage/Index
         public async Task<ActionResult> Index(ManageMessageId? message)
@@ -84,6 +87,8 @@ namespace yogaRx.Controllers
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
+
+            ViewBag.Favorites = CurrentUser.Favorites;
             return View(model);
         }
 
@@ -105,7 +110,19 @@ namespace yogaRx.Controllers
 
         }
 
-     
+        //POST: Favorite
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Favorite(int PoseId)
+        {
+
+
+            CurrentUser.Favorites.Add(db.Poses.Find(PoseId));
+            db.SaveChanges();
+            return RedirectToAction("Index", "Poses");
+
+        }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
