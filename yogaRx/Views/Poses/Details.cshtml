@@ -39,9 +39,16 @@
                 }
             </dd>
         }
-       
+
 
     </dl>
+    @using (Html.BeginForm("Favorite", "Manage", "Post"))
+    {
+        @Html.AntiForgeryToken()
+        @Html.Hidden("PoseId", Model.PoseId)
+        <input type="submit" value="Favorite" />
+    }
+
 
 </div>
 

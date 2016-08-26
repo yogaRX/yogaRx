@@ -252,6 +252,26 @@
     <Compile Include="Migrations\201608251717028_bodymap.Designer.cs">
       <DependentUpon>201608251717028_bodymap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608251759581_favorites.cs" />
+    <Compile Include="Migrations\201608251759581_favorites.Designer.cs">
+      <DependentUpon>201608251759581_favorites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251900278_changing favorites.cs" />
+    <Compile Include="Migrations\201608251900278_changing favorites.Designer.cs">
+      <DependentUpon>201608251900278_changing favorites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608261427258_poop.cs" />
+    <Compile Include="Migrations\201608261427258_poop.Designer.cs">
+      <DependentUpon>201608261427258_poop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608261428380_poop1.cs" />
+    <Compile Include="Migrations\201608261428380_poop1.Designer.cs">
+      <DependentUpon>201608261428380_poop1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608261432126_thing.cs" />
+    <Compile Include="Migrations\201608261432126_thing.Designer.cs">
+      <DependentUpon>201608261432126_thing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ailment.cs" />
@@ -432,6 +452,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608251717028_bodymap.resx">
       <DependentUpon>201608251717028_bodymap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251759581_favorites.resx">
+      <DependentUpon>201608251759581_favorites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251900278_changing favorites.resx">
+      <DependentUpon>201608251900278_changing favorites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608261427258_poop.resx">
+      <DependentUpon>201608261427258_poop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608261428380_poop1.resx">
+      <DependentUpon>201608261428380_poop1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608261432126_thing.resx">
+      <DependentUpon>201608261432126_thing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

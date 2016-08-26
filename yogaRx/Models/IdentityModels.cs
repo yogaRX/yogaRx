@@ -21,6 +21,7 @@ namespace yogaRx.Models
 
         //Navigation
         public virtual ICollection<Rating> Ratings { get; set; }
+        public virtual ICollection<Pose> Favorites { get; set; }
         
 
 

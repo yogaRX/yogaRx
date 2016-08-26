@@ -4,7 +4,6 @@
 }
 
 <h2>@ViewBag.Title.</h2>
-
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
     <h4>Change your account settings</h4>
@@ -20,10 +19,15 @@
 
             </div>
         </div> <!-- end Profile Picture -->
-
         
 
     }
+    <ul>
+    @foreach (yogaRx.Models.Pose fav in ViewBag.Favorites)
+    {
+      <li> @Html.ActionLink(fav.PoseName, "Details", "Poses", new {id = fav.PoseId}, null)</li>
+    }
+        </ul>
     <dl class="dl-horizontal">
         <dt>Password:</dt>
         <dd>
