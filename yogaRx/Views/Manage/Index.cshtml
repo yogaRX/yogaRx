@@ -22,7 +22,12 @@
         
 
     }
+
+    @*<img src="~/File?id=@ViewBag.User" alt="avatar" />*@
+
+    <p>Favorites:</p>
     <ul>
+
     @foreach (yogaRx.Models.Pose fav in ViewBag.Favorites)
     {
       <li> @Html.ActionLink(fav.PoseName, "Details", "Poses", new {id = fav.PoseId}, null)</li>

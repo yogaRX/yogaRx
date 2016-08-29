@@ -87,7 +87,7 @@ namespace yogaRx.Controllers
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
-
+            ViewBag.User = CurrentUser.Id;
             ViewBag.Favorites = CurrentUser.Favorites;
             return View(model);
         }

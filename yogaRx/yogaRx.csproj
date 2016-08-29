@@ -201,6 +201,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AilmentsController.cs" />
+    <Compile Include="Controllers\FileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PosesController.cs" />
@@ -226,13 +227,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images.css" />
     <Content Include="Content\images\body.png" />
     <Content Include="Content\images\boundankle.jpg" />
     <Content Include="Content\images\cat10.jpg" />
     <Content Include="Content\images\chair.jpg" />
     <Content Include="Content\images\childspose.jpg" />
     <Content Include="Content\images\corpsepose8.jpg" />
+    <Content Include="Content\images\coverphoto.jpg" />
     <Content Include="Content\images\cow9.jpg" />
     <Content Include="Content\images\cowface.jpg" />
     <Content Include="Content\images\cowfacetwo.jpg" />
