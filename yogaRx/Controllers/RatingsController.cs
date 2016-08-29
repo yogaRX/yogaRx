@@ -98,6 +98,7 @@ namespace yogaRx.Controllers
         }
 
         // GET: Ratings/Delete/5
+       
         public ActionResult Delete(int? id)
         {
             if (id == null)

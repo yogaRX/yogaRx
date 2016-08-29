@@ -1,8 +1,10 @@
-﻿body {
+﻿
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color:burlywood;
-    background-size:80%
+    background-color:#FDFDCB;
+    background-size:100%
   
    
     
@@ -20,12 +22,30 @@
     
     
 }
+.btn-default,
+.btn-default:hover,
+.btn-default:active,
+.btn-default,
+.btn-default:focus {
+    background-color: #FF9B8B;
+    /*border-color: lightcoral;*/
+}
 
+
+/* unvisited link */
+a:link {
+    color: #E45144;
+}
+
+/* visited link */
+a:visited {
+    color: #E45144;
+}
 
  Set padding to keep content from hitting the edges 
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -44,7 +64,7 @@ textarea {
 #header {
   
     height: 150px; 
-    background-color:lightcoral; 
+    background-color:bisque; 
     overflow: hidden;
 
 }
@@ -63,17 +83,17 @@ textarea {
     text-align:center;
    
 }
-.navbar  {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: 5px;
-    border-radius: 75px;
-    /*margin-bottom: 0px;*/
-    font-size: 15px;
-    letter-spacing: 3px;
-
-    
+.navbar-default {
+    background-color: #FF9B8B;
+    border-color: #FF9B8B;
 }
+/*.navbar-default .navbar-nav > li > a {
+    color: #777777;
+}*/
+/*.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #E7E7E7;
+    color: #555555;
+}*/
 .justified {
     position:absolute;
     left:75%;
@@ -85,5 +105,20 @@ textarea {
 #disclaimer{
     font-size:10px;
 }
+.photosize{
+    height:350px
+}
 
-1 Comment Collapse
+.small{
+    height:40px
+}
+
+.commentbox {
+    border-radius:25px;
+    background:#0094ff;
+    padding:10px; 
+        margin:10px;
+        width:auto;
+  
+}
+These are changes that were made just to help is locate what needed to be changed. The color of the buttons and links were all changed by calling the ids or classes in the Css file.  The background was also changed as well The changes have not been committed. Still working on the nav-bar. 

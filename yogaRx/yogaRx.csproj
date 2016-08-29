@@ -249,9 +249,9 @@
     <Compile Include="Migrations\201608241459039_poseid.Designer.cs">
       <DependentUpon>201608241459039_poseid.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608251717028_bodymap.cs" />
-    <Compile Include="Migrations\201608251717028_bodymap.Designer.cs">
-      <DependentUpon>201608251717028_bodymap.cs</DependentUpon>
+    <Compile Include="Migrations\201608261440031_fixing.cs" />
+    <Compile Include="Migrations\201608261440031_fixing.Designer.cs">
+      <DependentUpon>201608261440031_fixing.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201608251759581_favorites.cs" />
     <Compile Include="Migrations\201608251759581_favorites.Designer.cs">
@@ -287,13 +287,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images.css" />
     <Content Include="Content\images\body.png" />
     <Content Include="Content\images\boundankle.jpg" />
     <Content Include="Content\images\cat10.jpg" />
     <Content Include="Content\images\chair.jpg" />
     <Content Include="Content\images\childspose.jpg" />
     <Content Include="Content\images\corpsepose8.jpg" />
+    <Content Include="Content\images\coverphoto.jpg" />
     <Content Include="Content\images\cow9.jpg" />
     <Content Include="Content\images\cowface.jpg" />
     <Content Include="Content\images\cowfacetwo.jpg" />
@@ -452,8 +452,8 @@
     <EmbeddedResource Include="Migrations\201608241459039_poseid.resx">
       <DependentUpon>201608241459039_poseid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608251717028_bodymap.resx">
-      <DependentUpon>201608251717028_bodymap.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608261440031_fixing.resx">
+      <DependentUpon>201608261440031_fixing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608251759581_favorites.resx">
       <DependentUpon>201608251759581_favorites.cs</DependentUpon>
