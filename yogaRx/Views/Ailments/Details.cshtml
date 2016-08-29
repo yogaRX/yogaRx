@@ -3,29 +3,23 @@
 @{
     ViewBag.Title = "Details";
 }
-<link href="~/Content/Site.css" rel="stylesheet" />
-<h2>Details</h2>
+
+<link href="~/Content/Images.css" rel="stylesheet" />
+
+
 
 <div>
-    <h4>Ailment</h4>
+    <h2>@Html.DisplayFor(model => model.AilmentName)</h2>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        @*<dt>
             Ailment
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.AilmentName)
-        </dd>
-    </dl>
-    @*<dt>
-            @Html.DisplayNameFor(model => model.AilmentDesc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AilmentDesc)
         </dd>*@
-
+    </dl>
+    
     @foreach (yogaRx.Models.Pose item in ViewBag.Poses)
     {
         @*if (item.Score != null)
@@ -33,7 +27,6 @@
             <div> @item.Score  </div>
          
         }*@
-
 
         if (item.Photo != null)
         {
@@ -68,7 +61,7 @@
                 <span class="glyphicon glyphicon-thumbs-up">&nbsp;</span>@Html.RadioButton("SymbolRating", "1", new { htmlAttributes = new { @class = "form-control" } })
                 <span class="glyphicon glyphicon-thumbs-down">&nbsp;</span>@Html.RadioButton("SymbolRating", "-1", new { htmlAttributes = new { @class = "form-control" } })
             </div>
-
+            
              @*@Html.TextBoxFor(m => m.Poses, new { @class = "form-control" })*@
             <label for="comment">Comment:</label>
             <textarea type="Text" name="TextReview" class="form-control" rows="5" id="comment"></textarea>
@@ -76,7 +69,6 @@
         </div>
 
         
-
     }
     <div>
         @foreach (var pose in Model.Poses)
@@ -85,13 +77,17 @@
             {
                 if (rating != null)
                 {
-                    <div class="commentbox">
 
-                        <b> @rating.User.UserName</b> said:<p>
-                        @rating.TextReview
-                    </div>
+                            <p>said:</p>
+                            <div class="commentbox">
+
+                                @rating.TextReview
+
+                                
+                            </div>
 
 
+                        
                 }
             }
         }
