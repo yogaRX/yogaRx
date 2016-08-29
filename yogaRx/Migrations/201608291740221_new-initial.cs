@@ -3,7 +3,7 @@ namespace yogaRx.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class newinitial : DbMigration
     {
         public override void Up()
         {
@@ -14,6 +14,7 @@ namespace yogaRx.Migrations
                         AilmentId = c.Int(nullable: false, identity: true),
                         AilmentName = c.String(maxLength: 50),
                         AilmentDesc = c.String(),
+                        BodyPartID = c.String(),
                     })
                 .PrimaryKey(t => t.AilmentId);
             
@@ -25,6 +26,7 @@ namespace yogaRx.Migrations
                         PoseName = c.String(maxLength: 50),
                         PoseDesc = c.String(),
                         Photo = c.String(),
+                        Photo1 = c.String(),
                         User_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.PoseId)
@@ -38,13 +40,16 @@ namespace yogaRx.Migrations
                         RatingId = c.Int(nullable: false, identity: true),
                         SymbolRating = c.Short(),
                         TextReview = c.String(),
-                        Pose_PoseId = c.Int(),
+                        PoseId = c.Int(nullable: false),
+                        AilmentId = c.Int(nullable: false),
                         User_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.RatingId)
-                .ForeignKey("dbo.Poses", t => t.Pose_PoseId)
+                .ForeignKey("dbo.Ailments", t => t.AilmentId, cascadeDelete: true)
+                .ForeignKey("dbo.Poses", t => t.PoseId, cascadeDelete: true)
                 .ForeignKey("dbo.AspNetUsers", t => t.User_Id)
-                .Index(t => t.Pose_PoseId)
+                .Index(t => t.PoseId)
+                .Index(t => t.AilmentId)
                 .Index(t => t.User_Id);
             
             CreateTable(
@@ -52,7 +57,12 @@ namespace yogaRx.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
+                        UserHandle = c.String(),
                         ProPhoto = c.String(),
+                        PhotoName = c.String(),
+                        PhotoType = c.String(),
+                        PhotoBytes = c.Binary(),
+                        FileType = c.Int(nullable: false),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),
@@ -134,12 +144,13 @@ namespace yogaRx.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.Poses", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.Ratings", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.Poses", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.Ratings", "Pose_PoseId", "dbo.Poses");
+            DropForeignKey("dbo.Ratings", "PoseId", "dbo.Poses");
+            DropForeignKey("dbo.Ratings", "AilmentId", "dbo.Ailments");
             DropForeignKey("dbo.PoseAilments", "Ailment_AilmentId", "dbo.Ailments");
             DropForeignKey("dbo.PoseAilments", "Pose_PoseId", "dbo.Poses");
             DropIndex("dbo.PoseAilments", new[] { "Ailment_AilmentId" });
@@ -151,7 +162,8 @@ namespace yogaRx.Migrations
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.Ratings", new[] { "User_Id" });
-            DropIndex("dbo.Ratings", new[] { "Pose_PoseId" });
+            DropIndex("dbo.Ratings", new[] { "AilmentId" });
+            DropIndex("dbo.Ratings", new[] { "PoseId" });
             DropIndex("dbo.Poses", new[] { "User_Id" });
             DropTable("dbo.PoseAilments");
             DropTable("dbo.AspNetRoles");

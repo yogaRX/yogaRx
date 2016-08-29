@@ -311,10 +311,12 @@ namespace yogaRx.Migrations
             var stanff = context.Poses.Single(item => item.PoseName == "Standing Forward Fold");
             stanff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Depression"));
             stanff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Headache"));
+            stanff.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Insomnia"));
 
             var dDog = context.Poses.Single(item => item.PoseName == "Downward Facing Dog");
             dDog.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Sciatica"));
             dDog.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Headache"));
+            dDog.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Backache"));
 
             var catcow = context.Poses.Single(item => item.PoseName == "Cat Cow Pose");
             catcow.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Anxiety"));
@@ -328,6 +330,7 @@ namespace yogaRx.Migrations
 
             var suptwi = context.Poses.Single(item => item.PoseName == "Supine Twist");
             suptwi.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
+            suptwi.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Sciatica"));
 
             var loc = context.Poses.Single(item => item.PoseName == "Locust Pose");
             loc.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Backache"));
@@ -364,6 +367,7 @@ namespace yogaRx.Migrations
 
             var chair = context.Poses.Single(item => item.PoseName == "Chair Pose");
             chair.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Fatigue"));
+            chair.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Anxiety"));
 
             var tabtop = context.Poses.Single(item => item.PoseName == "Table Top with Reversed Hands");
             tabtop.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Carpal Tunnel Syndrome"));
@@ -387,148 +391,147 @@ namespace yogaRx.Migrations
             cresmoon.Ailments.Add(context.Ailments.Single(item => item.AilmentName == "Digestion"));
 
 
-            context.Ratings.AddOrUpdate(p => p.RatingId,
-                new Rating { }
+            context.Ratings.AddOrUpdate(r => r.RatingId,
+
+                new Rating
+                {
+                    RatingId = 1,
+                    SymbolRating = 1,
+                    TextReview = "This pose worked wonders for my back!",
+                    Pose = child,
+                    Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                },
+
+                  new Rating
+                  {
+                      RatingId = 2,
+                      SymbolRating = 1,
+                      TextReview = "Amazing",
+                      Pose = child,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+                  },
+                  new Rating
+                  {
+                      RatingId = 3,
+                      SymbolRating = -1,
+                      TextReview = " ",
+                      Pose = catcow,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+                  },
+                  new Rating
+                  {
+                      RatingId = 4,
+                      SymbolRating = 1,
+                      TextReview = "Wonderful",
+                      Pose = child,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+
+                  },
+                new Rating
+                {
+                    RatingId = 5,
+                    SymbolRating = -1,
+                    TextReview = " ",
+                    Pose = catcow,
+                    Ailment = context.Ailments.Single(item => item.AilmentName == "Anxiety"),
+
+
+                },
+                new Rating
+                {
+                    RatingId = 6,
+                    SymbolRating = 1,
+                    TextReview = " ",
+                    Pose = child,
+                    Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+
+                },
+                  new Rating
+                  {
+                      RatingId = 7,
+                      SymbolRating = -1,
+                      TextReview = " ",
+                      Pose = plow,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Insomnia"),
+
+                  },
+                 new Rating
+                 {
+                     RatingId = 8,
+                     SymbolRating = 1,
+                     TextReview = "Best pose ever.",
+                     Pose = child,
+                     Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+
+                 },
+                   new Rating
+                   {
+                       RatingId = 9,
+                       SymbolRating = -1,
+                       TextReview = " ",
+                       Pose = child,
+                       Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                   },
+                  new Rating
+                  {
+                      RatingId = 10,
+                      SymbolRating = 1,
+                      TextReview = " ",
+                      Pose = child,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                  },
+                  new Rating
+                  {
+                      RatingId = 11,
+                      SymbolRating = 1,
+                      TextReview = " ",
+                      Pose = child,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                  },
+                  new Rating
+                  {
+                      RatingId = 12,
+                      SymbolRating = 1,
+                      TextReview = " ",
+                      Pose = child,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                  },
+                  new Rating
+                  {
+                      RatingId = 13,
+                      SymbolRating = 1,
+                      TextReview = " ",
+                      Pose = child,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                  },
+                  new Rating
+                  {
+                      RatingId = 14,
+                      SymbolRating = 1,
+                      TextReview = " ",
+                      Pose = child,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                  },
+                  new Rating
+                  {
+                      RatingId = 15,
+                      SymbolRating = 1,
+                      TextReview = " ",
+                      Pose = child,
+                      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
+
+                  }
                 );
-
-            //    new Rating
-            //    {
-                    //RatingId = 1,
-                    //SymbolRating = 1,
-                    //TextReview = "This pose worked wonders for my back!",
-                    //Pose = child,
-                    //Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-
-                //}
-                 // new Rating
-                 // {
-                 //     RatingId = 2,
-                 //     SymbolRating = 1,
-                 //     TextReview = "Amazing",
-                 //     Pose = child,
-                 //     Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-                 // },
-                 // new Rating
-                 // {
-                 //     RatingId = 3,
-                 //     SymbolRating = -1,
-                 //     TextReview = " ",
-                 //     Pose = catcow,
-                 //     Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-                 // },
-                 // new Rating
-                 // {
-                 //     RatingId = 4,
-                 //     SymbolRating = 1,
-                 //     TextReview = "Wonderful",
-                 //     Pose = child,
-                 //     Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-
-
-                 // },
-                 //new Rating
-                 //{
-                 //    RatingId = 5,
-                 //    SymbolRating = -1,
-                 //    TextReview = " ",
-                 //    Pose = catcow,
-                 //    Ailment = context.Ailments.Single(item => item.AilmentName == "Anxiety"),
-
-
-                 //},
-                 //new Rating
-                 //{
-                 //    RatingId = 6,
-                 //    SymbolRating = 1,
-                 //    TextReview = " ",
-                 //    Pose = child,
-                 //    Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-
-
-                 //},
-                 //  new Rating
-                 //  {
-                 //      RatingId = 7,
-                 //      SymbolRating = -1,
-                 //      TextReview = " ",
-                 //      Pose = plow,
-                 //      Ailment = context.Ailments.Single(item => item.AilmentName == "Insomnia"),
-
-                 //  },
-                 // new Rating
-                 // {
-                 //     RatingId = 8,
-                 //     SymbolRating = 1,
-                 //     TextReview = "Best pose ever.",
-                 //     Pose = child,
-                 //     Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-
-
-                 // },
-                 //   new Rating
-                 //   {
-                 //       RatingId = 9,
-                 //       SymbolRating = -1,
-                 //       TextReview = " ",
-                 //       Pose = child,
-                 //       Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-
-                 //   },
-                 //  new Rating
-                 //  {
-                 //      RatingId = 10,
-                 //      SymbolRating = 1,
-                 //      TextReview = " ",
-                 //      Pose = child,
-                 //      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-
-                 //  },
-                 //  new Rating
-                 //  {
-                 //      RatingId = 11,
-                 //      SymbolRating = 1,
-                 //      TextReview = " ",
-                 //      Pose = child,
-                 //      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-
-                 //  },
-                 //  new Rating
-                 //  {
-                 //      RatingId = 12,
-                 //      SymbolRating = 1,
-                 //      TextReview = " ",
-                 //      Pose = child,
-                 //      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-
-                 //  },
-                 //  new Rating
-                 //  {
-                 //      RatingId = 13,
-                 //      SymbolRating = 1,
-                 //      TextReview = " ",
-                 //      Pose = child,
-                 //      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-
-                 //  },
-                 //  new Rating
-                 //  {
-                 //      RatingId = 14,
-                 //      SymbolRating = 1,
-                 //      TextReview = " ",
-                 //      Pose = child,
-                 //      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-
-                 //  },
-                 //  new Rating
-                 //  {
-                 //      RatingId = 15,
-                 //      SymbolRating = 1,
-                 //      TextReview = " ",
-                 //      Pose = child,
-                 //      Ailment = context.Ailments.Single(item => item.AilmentName == "Backache"),
-
-                 //  }
-                //);
 
 
         }

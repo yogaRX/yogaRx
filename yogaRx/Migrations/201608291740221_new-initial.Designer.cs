@@ -7,13 +7,13 @@ namespace yogaRx.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class testimage : IMigrationMetadata
+    public sealed partial class newinitial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(testimage));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(newinitial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201608191816084_test-image"; }
+            get { return "201608291740221_new-initial"; }
         }
         
         string IMigrationMetadata.Source
