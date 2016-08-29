@@ -68,6 +68,7 @@
                 <span class="glyphicon glyphicon-thumbs-up">&nbsp;</span>@Html.RadioButton("SymbolRating", "1", new { htmlAttributes = new { @class = "form-control" } })
                 <span class="glyphicon glyphicon-thumbs-down">&nbsp;</span>@Html.RadioButton("SymbolRating", "-1", new { htmlAttributes = new { @class = "form-control" } })
             </div>
+            
 
              @*@Html.TextBoxFor(m => m.Poses, new { @class = "form-control" })*@
             <label for="comment">Comment:</label>
@@ -85,13 +86,17 @@
             {
                 if (rating != null)
                 {
-                    <div class="commentbox">
 
-                        <b> @rating.User.UserName</b> said:<p>
-                        @rating.TextReview
-                    </div>
+                            <p>said:</p>
+                            <div class="commentbox">
+
+                                @rating.TextReview
+
+                                
+                            </div>
 
 
+                        
                 }
             }
         }
