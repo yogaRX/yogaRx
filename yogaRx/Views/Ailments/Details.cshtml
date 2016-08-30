@@ -44,19 +44,18 @@
     {
         @Html.AntiForgeryToken()
         @Html.Hidden("AilmentId", Model.AilmentId)
-
+        
         <div class="form-group">
-            @Html.LabelFor(model => model.Poses, "Poses", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Poses, "", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("PoseList", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Poses, "", new { @class = "text-danger" })
-            </div>
+            </div><br/>
 
 
          
 
-            @using (Html.BeginForm())
-            {
+            
                 <div class="form-group">
                     <div class="btn-group" data-toggle="buttons">
                         <label class="pdsa-radiobutton btn btn-primary active">
@@ -70,7 +69,7 @@
                         </label>
                     </div>
                 </div>
-            }
+            
      
 
              @*@Html.TextBoxFor(m => m.Poses, new { @class = "form-control" })*@
@@ -88,8 +87,12 @@
             {
                 if (rating != null)
                 {
+                    if (rating.TextReview != "")
 
-                            <p>said:</p>
+                    {
+                    
+                         <u><b> @rating.User.UserHandle</b>  said:</u>
+                        
                             <div class="commentbox">
 
                                 @rating.TextReview
@@ -98,8 +101,9 @@
                             </div>
 
 
-                        
-                }
+
+                        }
+                    }
             }
         }
     </div>
