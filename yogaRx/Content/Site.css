@@ -23,6 +23,9 @@ body {
     
     
 }
+.pose-link{
+    font-weight: bold;
+}
 
 .frontext{
     color: #8b8173;
@@ -31,7 +34,7 @@ body {
     
 }
 .navhome{
-    font-family:'Nothing You Could Do';
+    font-family:'Nothing You Could Do' !important, cursive;
     font-size: 25px;
 
 }
@@ -43,6 +46,9 @@ body {
     font-size: 30px;
     color: #9C9A81;
     font-family:'Palanquin', sans-serif;
+}
+a:link{
+    font-family: 'Palanquin';
 }
 
 .btn-default,
