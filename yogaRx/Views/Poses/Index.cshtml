@@ -4,40 +4,35 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Poses</h2>
+<br />
 
 <p>
     @*@Html.ActionLink("Create New", "Create")*@
 </p>
-<table class="table">
-    <tr>
-        <th>
-            Pose Name
-        </th>
-        <th>
-            Pose Description
-        </th>
-       
-    </tr>
+
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.Raw(item.PoseName)
-        </td>
-        <td>
-            @Html.Raw(item.PoseDesc)
-        </td>
-        <td>
-        </td>
-        <td>
+   
+        
+            <div>
+                <h4>
+                    @Html.ActionLink(item.PoseName, "Details", "Poses", new { id = item.PoseId }, null)
+                </h4>
+            </div>
+           
+       
+        
+            <div>
+                @Html.Raw(item.PoseDesc)
+            </div>
+            <br/>
             @*@Html.ActionLink("Edit", "Edit", new { id=item.PoseId }) |*@
-            @Html.ActionLink("Details", "Details", new { id=item.PoseId }) 
+            @*@Html.ActionLink("Details", "Details", new { id=item.PoseId })*@ 
             @*@Html.ActionLink("Delete", "Delete", new { id=item.PoseId })*@
             @*@Html.RadioButtonFor(x => x., "Positive", new { htmlAttributes = new { @class = "form-control" } })
             @Html.RadioButtonFor(x => x.ReviewType, "Negative", new { htmlAttributes = new { @class = "form-control" } })*@
-        </td>
-    </tr>
+     
 }
 
-</table>
+

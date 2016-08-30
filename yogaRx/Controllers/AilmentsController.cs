@@ -59,6 +59,7 @@ namespace yogaRx.Controllers
         
         {
             var ailments = from item in db.Ailments
+                           //orderby item 
                            select item;
 
             // filter
@@ -73,6 +74,13 @@ namespace yogaRx.Controllers
 
             return View(ailments.ToList());
         }
+
+        //public ActionResult FlowerPower()
+        //{
+        //    if ( Rating.score)
+
+        //}
+        
 
 
 
@@ -109,6 +117,8 @@ namespace yogaRx.Controllers
                             Score = Score
 
                         };
+
+            
 
             ViewBag.Poses = poses;
             return View(ailment);
