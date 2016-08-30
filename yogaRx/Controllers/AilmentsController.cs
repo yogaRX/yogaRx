@@ -75,12 +75,7 @@ namespace yogaRx.Controllers
             return View(ailments.ToList());
         }
 
-        //public ActionResult FlowerPower()
-        //{
-        //    if ( Rating.score)
 
-        //}
-        
 
 
 
@@ -101,6 +96,7 @@ namespace yogaRx.Controllers
             //var firstPose = ailment.Poses.Single(p => p.PoseName == "Child's Pose");
             //var firstPoseRatings = db.Ratings.Where(r => r.PoseId == firstPose.PoseId);
             //double? score = db.Ratings.Where(r => r.PoseId == firstPose.PoseId).Average(r => r.SymbolRating);
+
 
 
             var poses = from p in ailment.Poses

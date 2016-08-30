@@ -17,10 +17,15 @@ namespace yogaRx.Controllers
         }
         public ActionResult Index()
         {
+           ViewBag.AilList = from item in db.Ailments
+            orderby item.AilmentName ascending
+            select item; 
 
-            ViewBag.AilList = db.Ailments.ToList();
+            //ViewBag.AilList = db.Ailments.ToList();
             return View();
         }
+
+
 
         public ActionResult About()
         {

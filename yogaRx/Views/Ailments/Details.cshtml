@@ -18,58 +18,30 @@
             @Html.DisplayFor(model => model.AilmentName)
         </dd>*@
     </dl>
-    
-    @foreach (yogaRx.Models.Pose item in ViewBag.Poses)
+        @foreach (yogaRx.Models.Pose item in ViewBag.Poses)
             {
-                if (item.Score != null)
-                          {
-                              <div> @item.Score </div>
-        }
-        if(item.Score != null)
-        {
+            @*if (item.Score != null)
+                                  {
+                                      <div> @item.Score </div>
+                }*@
+<div>
+            <div align="center">
+                @Html.ActionLink(item.PoseName, "Details", "Poses", new { id = item.PoseId }, new { @class = "pose-links" })
+            </div>
 
-        }
-        if (item.Score <= -1)
-        {
-
-        }
-        if (item.Score == .25)
-        {
-                   <span class="glyphicon glyphicon-thumbs-up"></span>
-                }
-                if (item.Score == .50)
+            <div align="center">
+                @if (item.Photo != null)
                 {
-                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                
+                    <a href="@Url.Action("Details", "Poses", new { id = item.PoseId })" ><img class="small" src="@Url.Content(item.Photo)" /></a>
                 }
-                if (item.Score == .75)
-                {
-                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                }
-                if (item.Score >= .90)
-                {
-                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                }
-               
+            </div>
+    </div>
+
+            <br>
 
 
-
-
-        if (item.Photo != null)
-        {
-        <img class="small" src="@Url.Content(item.Photo)" />
         }
-
-        <div>
-            @Html.ActionLink(item.PoseName, "Details", "Poses", new { id = item.PoseId }, null)
-        </div>
-    }
+    <br>
     @{
         ViewBag.SelectablePoses = from item in Model.Poses
                                   select item;

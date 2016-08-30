@@ -12,17 +12,18 @@ body {
 /*This is a change*/
 #photo {
     /*padding-top: 0px;*/
-    padding-bottom:300px;
+    padding-bottom:375px;
     background-image: url(images/coverphoto.jpg);
     background-repeat:repeat-x;
-    background-size: 50%;
+    background-size: 55%;
    background-position:top;
-    border-radius: 25px;
+    border-radius: 75px;
     
     
     
     
 }
+
 .frontext{
     color: #8b8173;
     font-size: 20px;
@@ -131,7 +132,8 @@ textarea {
 }
 
 .small{
-    height:40px
+    width:300px;
+    border-radius: 15px;
 }
 
 .commentbox {
