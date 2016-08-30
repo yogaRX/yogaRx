@@ -13,14 +13,14 @@ namespace yogaRx.Controllers
             private ApplicationDbContext db = new ApplicationDbContext();
 
             // GET: File
-            public ActionResult Index(int id)
+            public ActionResult Index(string id)
             {
                 var fileToRetrieve = db.Users.Find(id);
 
                 if (fileToRetrieve.PhotoBytes != null && fileToRetrieve.PhotoType != null)
                     return File(fileToRetrieve.PhotoBytes, fileToRetrieve.PhotoType);
 
-                return View();
+                return HttpNotFound();
             }
         }
     
