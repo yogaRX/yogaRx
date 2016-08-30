@@ -42,15 +42,15 @@
         <font class="frontext" >Ailments:</font>
         @foreach (yogaRx.Models.Ailment item in ViewBag.AilList)
         {
-            
-                
-  
-               
+
+
+
+
                 @*<td>
                         @Html.DisplayFor(modelItem => item.AilmentDesc)
                     </td>*@
                 <div  >
-                      @Html.ActionLink(item.AilmentName, "Details", "Ailments", new { id = item.AilmentId, @class= "linktext" } )
+                      @Html.ActionLink(item.AilmentName, "Details", "Ailments", new { id = item.AilmentId }, new { @class= "linktext" } )
                 </div>
                 
             
