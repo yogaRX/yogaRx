@@ -23,10 +23,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.PoseName)
+            @Html.Raw(item.PoseName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PoseDesc)
+            @Html.Raw(item.PoseDesc)
         </td>
         <td>
         </td>
