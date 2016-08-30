@@ -53,11 +53,27 @@
                 @Html.ValidationMessageFor(model => model.Poses, "", new { @class = "text-danger" })
             </div>
 
-            <div class="col-md-10">
-                <span class="glyphicon glyphicon-thumbs-up">&nbsp;</span>@Html.RadioButton("SymbolRating", "1", new { htmlAttributes = new { @class = "form-control" } })
-                <span class="glyphicon glyphicon-thumbs-down">&nbsp;</span>@Html.RadioButton("SymbolRating", "-1", new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-            
+
+         
+
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="pdsa-radiobutton btn btn-primary active">
+                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                            @Html.RadioButton("SymbolRating", "1", new { htmlAttributes = new { @class = "form-control" } })
+                        </label>
+                        <label class="pdsa-radiobutton btn btn-primary">
+                            <span class="glyphicon glyphicon-thumbs-down"></span>
+                            @Html.RadioButton("SymbolRating", "-1",
+              new { htmlAttributes = new { @class = "form-control" } })
+                        </label>
+                    </div>
+                </div>
+            }
+     
+
              @*@Html.TextBoxFor(m => m.Poses, new { @class = "form-control" })*@
             <label for="comment">Comment:</label>
             <textarea type="Text" name="TextReview" class="form-control" rows="5" id="comment"></textarea>
