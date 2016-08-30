@@ -85,25 +85,13 @@
         {
             foreach (var rating in pose.Ratings)
             {
-                if (rating != null)
-                {
-                    if (rating.TextReview != "")
-
-                    {
-                    
+                if(rating.User != null && rating.Ailment.AilmentName == Model.AilmentName && rating.TextReview != "")
+                {                  
                          <u><b> @rating.User.UserHandle</b>  said:</u>
-                        
                             <div class="commentbox">
-
-                                @rating.TextReview
-
-                                
-                            </div>
-
-
-
-                        }
-                    }
+                                @rating.TextReview                               
+                            </div>                        
+                }
             }
         }
     </div>
