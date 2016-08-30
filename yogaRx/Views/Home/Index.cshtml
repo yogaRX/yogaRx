@@ -2,10 +2,10 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<link href="~/Content/Site.css" rel="stylesheet" />
-@*<link href="~/Content/Site.css" rel="stylesheet" />
-    @Html.ActionLink("Main page", "Main", "Home")
-<div>*@
+<head>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+
     <div>
 
         <header class="container-fluid">
@@ -35,11 +35,11 @@
 
         </map>
         <center><img src="~/Content/images/body.png" usemap="bodyparts" /></center>
-        <font class="frontext">Click on the body where you ail.</font>
+        <font class="frontext">Select region</font>
 
     </div>
     <div class="col-lg-6"align="center">
-        <font class="frontext" >Ailments:</font>
+       
         @foreach (yogaRx.Models.Ailment item in ViewBag.AilList)
         {
 
