@@ -209,69 +209,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608161547594_initial.cs" />
-    <Compile Include="Migrations\201608161547594_initial.Designer.cs">
-      <DependentUpon>201608161547594_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608171353101_username.cs" />
-    <Compile Include="Migrations\201608171353101_username.Designer.cs">
-      <DependentUpon>201608171353101_username.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608171540284_profile pic.cs" />
-    <Compile Include="Migrations\201608171540284_profile pic.Designer.cs">
-      <DependentUpon>201608171540284_profile pic.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608181423064_trying things.cs" />
-    <Compile Include="Migrations\201608181423064_trying things.Designer.cs">
-      <DependentUpon>201608181423064_trying things.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608191458264_profile picture advanced.cs" />
-    <Compile Include="Migrations\201608191458264_profile picture advanced.Designer.cs">
-      <DependentUpon>201608191458264_profile picture advanced.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608191816084_test-image.cs" />
-    <Compile Include="Migrations\201608191816084_test-image.Designer.cs">
-      <DependentUpon>201608191816084_test-image.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608191842496_idk.cs" />
-    <Compile Include="Migrations\201608191842496_idk.Designer.cs">
-      <DependentUpon>201608191842496_idk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608221405546_added-photo.cs" />
-    <Compile Include="Migrations\201608221405546_added-photo.Designer.cs">
-      <DependentUpon>201608221405546_added-photo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608241344116_rating ailment.cs" />
-    <Compile Include="Migrations\201608241344116_rating ailment.Designer.cs">
-      <DependentUpon>201608241344116_rating ailment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608241459039_poseid.cs" />
-    <Compile Include="Migrations\201608241459039_poseid.Designer.cs">
-      <DependentUpon>201608241459039_poseid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608261440031_fixing.cs" />
-    <Compile Include="Migrations\201608261440031_fixing.Designer.cs">
-      <DependentUpon>201608261440031_fixing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608251759581_favorites.cs" />
-    <Compile Include="Migrations\201608251759581_favorites.Designer.cs">
-      <DependentUpon>201608251759581_favorites.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608251900278_changing favorites.cs" />
-    <Compile Include="Migrations\201608251900278_changing favorites.Designer.cs">
-      <DependentUpon>201608251900278_changing favorites.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608261427258_poop.cs" />
-    <Compile Include="Migrations\201608261427258_poop.Designer.cs">
-      <DependentUpon>201608261427258_poop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608261428380_poop1.cs" />
-    <Compile Include="Migrations\201608261428380_poop1.Designer.cs">
-      <DependentUpon>201608261428380_poop1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608261432126_thing.cs" />
-    <Compile Include="Migrations\201608261432126_thing.Designer.cs">
-      <DependentUpon>201608261432126_thing.cs</DependentUpon>
+    <Compile Include="Migrations\201608291740221_new-initial.cs" />
+    <Compile Include="Migrations\201608291740221_new-initial.Designer.cs">
+      <DependentUpon>201608291740221_new-initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -422,53 +362,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201608161547594_initial.resx">
-      <DependentUpon>201608161547594_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608171353101_username.resx">
-      <DependentUpon>201608171353101_username.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608171540284_profile pic.resx">
-      <DependentUpon>201608171540284_profile pic.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608181423064_trying things.resx">
-      <DependentUpon>201608181423064_trying things.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608191458264_profile picture advanced.resx">
-      <DependentUpon>201608191458264_profile picture advanced.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608191816084_test-image.resx">
-      <DependentUpon>201608191816084_test-image.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608191842496_idk.resx">
-      <DependentUpon>201608191842496_idk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608221405546_added-photo.resx">
-      <DependentUpon>201608221405546_added-photo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608241344116_rating ailment.resx">
-      <DependentUpon>201608241344116_rating ailment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608241459039_poseid.resx">
-      <DependentUpon>201608241459039_poseid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608261440031_fixing.resx">
-      <DependentUpon>201608261440031_fixing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608251759581_favorites.resx">
-      <DependentUpon>201608251759581_favorites.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608251900278_changing favorites.resx">
-      <DependentUpon>201608251900278_changing favorites.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608261427258_poop.resx">
-      <DependentUpon>201608261427258_poop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608261428380_poop1.resx">
-      <DependentUpon>201608261428380_poop1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608261432126_thing.resx">
-      <DependentUpon>201608261432126_thing.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608291740221_new-initial.resx">
+      <DependentUpon>201608291740221_new-initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

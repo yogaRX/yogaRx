@@ -1,27 +1,60 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Home Page";
 }
+<link href="~/Content/Site.css" rel="stylesheet" />
 @*<link href="~/Content/Site.css" rel="stylesheet" />
     @Html.ActionLink("Main page", "Main", "Home")
 <div>*@
     <div>
 
-        <header class="container">
+        <header class="container-fluid">
             <div id="header" class="container">
 
                 <div>
-                    <h1 id="headertitle">YOGA Rx</h1>
+                    <h1 id="headertitle">yogaRx</h1>
 
-                    <p id="lead">Say Something here?</p>
+                    <p id="lead">Stretch your brain muscles</p>
 
                 </div>
             </div>
 
         </header>
     </div>
-    <div class="container-fluid"  id="photo">
-    <div class="container">
-       
+    <div class="jumbotron"  id="photo">
+
+</div>
+<div class="row">
+    <div class="col-lg-6" align="center">
+        <map name="bodyparts">
+            <area shape="rect" alt="head" coords="74,53,93,7" href="@Url.Action("HeadFilter","Ailments")" />
+            <area shape="rect" alt="trunk" coords="53,63,114,178" href="@Url.Action("TrunkFilter","Ailments")" />
+            <area shape="rect" alt="legs" coords="50,178,121,335" href="@Url.Action("LegFilter","Ailments")" />
+            <area shape="rect" alt="leftArm" coords="10,191,51,63" href="@Url.Action("ArmFilter","Ailments")" />
+            <area shape="rect" alt="rightArm" coords="116,163,164,61" href="@Url.Action("ArmFilter","Ailments")" />
+
+        </map>
+        <center><img src="~/Content/images/body.png" usemap="bodyparts" /></center>
+        <font class="frontext">Click on the body where you ail.</font>
+
+    </div>
+    <div class="col-lg-6"align="center">
+        <font class="frontext" >Ailments:</font>
+        @foreach (yogaRx.Models.Ailment item in ViewBag.AilList)
+        {
+            
+                
+  
+               
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.AilmentDesc)
+                    </td>*@
+                <div  >
+                      @Html.ActionLink(item.AilmentName, "Details", "Ailments", new { id = item.AilmentId, @class= "linktext" } )
+                </div>
+                
+            
+        }
     </div>
 </div>
  

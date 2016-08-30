@@ -9,14 +9,16 @@ namespace yogaRx.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         public ActionResult Main()
         {
             return View();
         }
         public ActionResult Index()
-        { 
+        {
 
-
+            ViewBag.AilList = db.Ailments.ToList();
             return View();
         }
 

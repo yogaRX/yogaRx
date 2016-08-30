@@ -3,36 +3,25 @@
 @{
     ViewBag.Title = "Details";
 }
-<link href="~/Content/Site.css" rel="stylesheet" />
-<h2>Details</h2>
+
+<link href="~/Content/Images.css" rel="stylesheet" />
+
+
 
 <div>
-    <h4>Ailment</h4>
+    <h2>@Html.DisplayFor(model => model.AilmentName)</h2>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        @*<dt>
             Ailment
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.AilmentName)
-        </dd>
-    </dl>
-    @*<dt>
-            @Html.DisplayNameFor(model => model.AilmentDesc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AilmentDesc)
         </dd>*@
-
+    </dl>
+    
     @foreach (yogaRx.Models.Pose item in ViewBag.Poses)
     {
-        @*if (item.Score != null)
-        {
-            <div> @item.Score  </div>
-         
-        }*@
 
 
         if (item.Photo != null)
@@ -64,6 +53,7 @@
                 @Html.ValidationMessageFor(model => model.Poses, "", new { @class = "text-danger" })
             </div>
 
+
          
 
             @using (Html.BeginForm())
@@ -91,7 +81,6 @@
         </div>
 
         
-
     }
     <div>
         @foreach (var pose in Model.Poses)
@@ -100,13 +89,17 @@
             {
                 if (rating != null)
                 {
-                    <div class="commentbox">
 
-                        <b> @rating.User.UserName</b> said:<p>
-                        @rating.TextReview
-                    </div>
+                            <p>said:</p>
+                            <div class="commentbox">
+
+                                @rating.TextReview
+
+                                
+                            </div>
 
 
+                        
                 }
             }
         }
