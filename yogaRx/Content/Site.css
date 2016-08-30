@@ -139,8 +139,20 @@ textarea {
     background: #fbffff;
     padding:10px; 
         margin:10px;
-        width:auto;
-  
+        width:auto;  
+}
+
+.btn-primary{
+
+    background-color: #9C9A81 !important; 
+    border-color: #9C9A81;
+}
+.btn-primary.active{
+    border-color: antiquewhite;
+}
+
+.buttons {
+    border-color:antiquewhite;
 }
 /*font-family: 'Nothing You Could Do', cursive;
 font-family: 'Palanquin', sans-serif;*/

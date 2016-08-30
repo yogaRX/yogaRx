@@ -21,15 +21,48 @@
     
     @foreach (yogaRx.Models.Pose item in ViewBag.Poses)
             {
-                @*if (item.Score != null)
+                if (item.Score != null)
                           {
                               <div> @item.Score </div>
-                          }*@
+        }
+        if(item.Score != null)
+        {
 
-    
+        }
+        if (item.Score <= -1)
+        {
 
-                if (item.Photo != null)
+        }
+        if (item.Score == .25)
+        {
+                   <span class="glyphicon glyphicon-thumbs-up"></span>
+                }
+                if (item.Score == .50)
                 {
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                
+                }
+                if (item.Score == .75)
+                {
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                }
+                if (item.Score >= .90)
+                {
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                }
+               
+
+
+
+
+        if (item.Photo != null)
+        {
         <img class="small" src="@Url.Content(item.Photo)" />
         }
 
@@ -102,7 +135,6 @@
     </div>
 
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.AilmentId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.AilmentId }) |*@
+    <p>@Html.ActionLink("Back to List", "Index")</p>
