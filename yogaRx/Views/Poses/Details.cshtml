@@ -24,11 +24,15 @@
         @if (Model.Photo != null)
         {
             <dd>
+               <div class="row">
+                   <div class="col-md-12 col-sm-12 col-xs-12">
                 <img class="photosize" src="@Url.Content(Model.Photo)" />
                 @if (Model.Photo1 != null)
                 {
                     <img class="photosize" src="@Url.Content(Model.Photo1)" />
                 }
+                </div>
+                </div>
             </dd>
         }
         
