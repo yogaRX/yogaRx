@@ -11,18 +11,30 @@ body {
 }
 
 /*This is a change*/
+@media screen and (max-width: 480px){
+    #photo{
+            background-image: url(images/coverphoto.jpg);
+            background-position:center;
+            border-radius: 50px;
+             padding-bottom: 350px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+       
 
-#photo {
-    /*padding-top: 0px;*/
 
-    padding-bottom:350px;
-    background-image: url(images/coverphoto.jpg);
-    /*background-repeat:repeat-x;
-    background-size: 50%;*/
-   background-position:center;
-   border-radius: 50px;
     }
-
+}
+@media screen and (min-width: 450px) {
+    #photo {
+        /*padding-top: 0px;*/
+        padding-bottom: 650px;
+        background-image: url(images/coverphoto.jpg);
+        background-repeat: repeat-x;
+        background-size: 100%;
+        background-position: center;
+        border-radius: 50px;
+    }
+}
 
 .pose-link{
     font-weight: bold;
@@ -35,7 +47,7 @@ body {
     
 }
 .navhome{
-    font-family:'Nothing You Could Do' !important, cursive;
+    font-family:'Nothing You Could Do', cursive !important;
     font-size: 25px;
 
 }
