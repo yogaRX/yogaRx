@@ -13,6 +13,7 @@ body {
 @media screen and (min-width: 250px){
 #photo {
     /*padding-top: 0px;*/
+<<<<<<< HEAD
     padding-bottom:350px;
     background-image: url(images/coverphoto.jpg);
     background-repeat:repeat-x;
@@ -20,15 +21,31 @@ body {
    background-position:center;
     border-radius: 50px;
     }
+=======
+    padding-bottom:375px;
+    background-image: url(images/coverphoto.jpg);
+    background-repeat:repeat-x;
+    background-size: 55%;
+   background-position:top;
+    border-radius: 75px;
+    
+    
+    
+    
+>>>>>>> 4957fe44b47c98ccb65187ba41cc71ad15d21204
 }
+.pose-link{
+    font-weight: bold;
+}
+
 .frontext{
     color: #8b8173;
-    font-size: 20px;
-    text-decoration: underline;
+    font-size: 15px;
+    /*text-decoration: underline;*/
     
 }
 .navhome{
-    font-family:'Nothing You Could Do';
+    font-family:'Nothing You Could Do' !important, cursive;
     font-size: 25px;
 
 }
@@ -40,6 +57,9 @@ body {
     font-size: 30px;
     color: #9C9A81;
     font-family:'Palanquin', sans-serif;
+}
+a:link{
+    font-family: 'Palanquin';
 }
 
 .btn-default,
@@ -121,16 +141,29 @@ textarea {
 }
 
 .small{
-    height:40px
+    width:300px;
+    border-radius: 15px;
 }
 
 .commentbox {
-    border-radius:25px;
+    border-radius:10px;
     background: #fbffff;
     padding:10px; 
         margin:10px;
-        width:auto;
-  
+        width:auto;  
+}
+
+.btn-primary{
+
+    background-color: #9C9A81 !important; 
+    border-color: #9C9A81;
+}
+.btn-primary.active{
+    border-color: antiquewhite;
+}
+
+.buttons {
+    border-color:antiquewhite;
 }
 
 .paratext{

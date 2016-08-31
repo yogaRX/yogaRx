@@ -1,39 +1,29 @@
 ﻿@model IEnumerable<yogaRx.Models.Ailment>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "AilmentIndex";
 }
 
-<h2>Index</h2>
+<h2>Ailments</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.AilmentName)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.AilmentDesc)
-        </th>*@
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AilmentName)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.AilmentDesc)
-        </td>*@
-        <td>
-         
-            @Html.ActionLink("Details", "Details", new { id=item.AilmentId }) 
+
+@foreach (var item in Model)
+{
+
+    <ul>
+        <li>
+            <div>
+                <h4>
+                    @Html.ActionLink(item.AilmentName, "Details", "Ailments", new { id = item.AilmentId }, null)
+                </h4>
+            </div>
+        </li>
+    </ul>
+
+            @*@Html.ActionLink("Details", "Details", new { id=item.AilmentId })*@ 
            
-        </td>
-    </tr>
+      
 }
 
-</table>
+

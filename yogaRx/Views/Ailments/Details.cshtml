@@ -18,20 +18,30 @@
             @Html.DisplayFor(model => model.AilmentName)
         </dd>*@
     </dl>
-    
-    @foreach (yogaRx.Models.Pose item in ViewBag.Poses)
-    {
+        @foreach (yogaRx.Models.Pose item in ViewBag.Poses)
+            {
+            @*if (item.Score != null)
+                                  {
+                                      <div> @item.Score </div>
+                }*@
+<div>
+            <div align="center">
+                @Html.ActionLink(item.PoseName, "Details", "Poses", new { id = item.PoseId }, new { @class = "pose-link" })
+            </div>
+
+            <div align="center">
+                @if (item.Photo != null)
+                {
+                    <a href="@Url.Action("Details", "Poses", new { id = item.PoseId })" ><img class="small" src="@Url.Content(item.Photo)" /></a>
+                }
+            </div>
+    </div>
+
+            <br>
 
 
-        if (item.Photo != null)
-        {
-        <img class="small" src="@Url.Content(item.Photo)" />
         }
-
-        <div>
-            @Html.ActionLink(item.PoseName, "Details", "Poses", new { id = item.PoseId }, null)
-        </div>
-    }
+    <br>
     @{
         ViewBag.SelectablePoses = from item in Model.Poses
                                   select item;
@@ -44,20 +54,20 @@
     {
         @Html.AntiForgeryToken()
         @Html.Hidden("AilmentId", Model.AilmentId)
-
+        
         <div class="form-group">
-            @Html.LabelFor(model => model.Poses, "Poses", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Poses, "", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("PoseList", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Poses, "", new { @class = "text-danger" })
-            </div>
+            </div><br>
+            <br>
 
 
          
 
-            @using (Html.BeginForm())
-            {
-                <div class="form-group">
+            <div>
+                <div class="form-group" >
                     <div class="btn-group" data-toggle="buttons">
                         <label class="pdsa-radiobutton btn btn-primary active">
                             <span class="glyphicon glyphicon-thumbs-up"></span>
@@ -70,7 +80,11 @@
                         </label>
                     </div>
                 </div>
-            }
+                </div>
+            <br>
+            
+
+            
      
 
              @*@Html.TextBoxFor(m => m.Poses, new { @class = "form-control" })*@
@@ -86,26 +100,18 @@
         {
             foreach (var rating in pose.Ratings)
             {
-                if (rating != null)
-                {
-
-                            <p>said:</p>
+                if(rating.User != null && rating.Ailment.AilmentName == Model.AilmentName && rating.TextReview != "")
+                {                  
+                         <u><b> @rating.User.UserHandle</b>  said:</u>
                             <div class="commentbox">
-
-                                @rating.TextReview
-
-                                
-                            </div>
-
-
-                        
+                                @rating.TextReview                               
+                            </div>                        
                 }
             }
         }
     </div>
 
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.AilmentId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.AilmentId }) |*@
+    <p>@Html.ActionLink("Back to List", "Index")</p>

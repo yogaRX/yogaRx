@@ -95,7 +95,7 @@ namespace yogaRx.Controllers
         //POST: /ailments/details/comment
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult PostComment(string TextReview, int PoseList, int AilmentId, short SymbolRating)
+        public ActionResult PostComment(string TextReview, int PoseList, int AilmentId, short? SymbolRating)
         {
             Rating Comment = new Rating();
             Comment.User = CurrentUser;
@@ -103,10 +103,11 @@ namespace yogaRx.Controllers
             Comment.PoseId = PoseList;
             Comment.AilmentId = AilmentId;
             Comment.SymbolRating = SymbolRating;
+            
 
             CurrentUser.Ratings.Add(Comment);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", "Ailments", new { id = AilmentId });
 
         }
 

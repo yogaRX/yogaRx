@@ -59,6 +59,7 @@ namespace yogaRx.Controllers
         
         {
             var ailments = from item in db.Ailments
+                           //orderby item 
                            select item;
 
             // filter
@@ -73,6 +74,8 @@ namespace yogaRx.Controllers
 
             return View(ailments.ToList());
         }
+
+
 
 
 
@@ -95,6 +98,7 @@ namespace yogaRx.Controllers
             //double? score = db.Ratings.Where(r => r.PoseId == firstPose.PoseId).Average(r => r.SymbolRating);
 
 
+
             var poses = from p in ailment.Poses
                         let Score = db.Ratings.Where(r => r.PoseId == p.PoseId).Average(r => r.SymbolRating)
                         orderby Score descending
@@ -109,6 +113,8 @@ namespace yogaRx.Controllers
                             Score = Score
 
                         };
+
+            
 
             ViewBag.Poses = poses;
             return View(ailment);
