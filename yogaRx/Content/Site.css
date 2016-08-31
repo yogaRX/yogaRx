@@ -143,6 +143,9 @@ textarea {
     position:absolute;
     left:75%;
 }
+.prof{
+    border-radius: 15px;
+}
 
 .navbar-default a:hover {
     color:coral !important;
@@ -151,7 +154,8 @@ textarea {
     font-size:10px;
 }
 .photosize{
-    width:100%
+    width:100%;
+    border-radius: 50px;
 }
 
 .small{
