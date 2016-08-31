@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using yogaRx.Models;
 
 namespace yogaRx.Controllers
-{
+{   [Authorize]
     public class HomeController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -15,6 +15,8 @@ namespace yogaRx.Controllers
         {
             return View();
         }
+
+        [AllowAnonymous]
         public ActionResult Index()
         {
            ViewBag.AilList = from item in db.Ailments
@@ -26,14 +28,14 @@ namespace yogaRx.Controllers
         }
 
 
-
+        [AllowAnonymous]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
-
+        [AllowAnonymous]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

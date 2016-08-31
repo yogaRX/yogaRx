@@ -15,6 +15,7 @@ namespace yogaRx.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Poses
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Poses.ToList());
@@ -23,6 +24,7 @@ namespace yogaRx.Controllers
 
 
         // GET: Poses/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
