@@ -39,8 +39,16 @@
     {
         @Html.AntiForgeryToken()
         @Html.Hidden("PoseId", Model.PoseId)
-        <input class="btn btn-secondary"  type="submit"  value="Favorite" />
+        <input onclick="change()" class="btn btn-secondary"  type="submit"  value="Favorite" id="myButton1"/>
     }
+
+    <script>
+
+function change(){
+    document.getElementById("myButton1").value = "Added To Favorites";
+    window.location.replace("/xxxx/?page_id=xx");
+}
+    </script>
 
 
 </div>

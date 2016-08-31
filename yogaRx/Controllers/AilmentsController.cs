@@ -13,7 +13,7 @@ namespace yogaRx.Controllers
     public class AilmentsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        [AllowAnonymous]
         public ActionResult HeadFilter()
         {
             var ailments = from item in db.Ailments
@@ -25,7 +25,7 @@ namespace yogaRx.Controllers
             return View(ailments.ToList());
 
         }
-
+        [AllowAnonymous]
         public ActionResult TrunkFilter()
         {
             var ailments = from item in db.Ailments
@@ -34,7 +34,7 @@ namespace yogaRx.Controllers
 
             return View(ailments.ToList());
         }
-
+        [AllowAnonymous]
         public ActionResult ArmFilter()
         {
             var ailments = from item in db.Ailments
@@ -43,7 +43,7 @@ namespace yogaRx.Controllers
 
             return View(ailments.ToList());
         }
-
+        [AllowAnonymous]
         public ActionResult LegFilter()
         {
             var ailments = from item in db.Ailments
