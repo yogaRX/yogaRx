@@ -39,9 +39,9 @@
 
 
     </dl>
-    @using (Html.BeginForm("Favorite", "Manage", "Post"))
+    @using (Html.BeginForm("Favorite", "Manage", FormMethod.Get))
     {
-        @Html.AntiForgeryToken()
+        @*@Html.AntiForgeryToken()*@
         @Html.Hidden("PoseId", Model.PoseId)
         <input onclick="change()" class="btn btn-secondary"  type="submit"  value="Favorite" id="myButton1"/>
     }

@@ -113,8 +113,8 @@ namespace yogaRx.Controllers
         }
 
         //POST: Favorite
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        // [HttpPost]
+        // [ValidateAntiForgeryToken]
         public ActionResult Favorite(int PoseId)
         {
 
