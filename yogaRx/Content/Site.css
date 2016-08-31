@@ -153,12 +153,13 @@ textarea {
         width:auto;  
 }
 
-.btn-primary{
+.btn-secondary{
 
     background-color: #9C9A81 !important; 
     border-color: #9C9A81;
+    color: #E2d8cc;
 }
-.btn-primary.active{
+.btn-secondary.active{
     border-color: antiquewhite;
 }
 
