@@ -11,22 +11,19 @@ body {
 }
 
 /*This is a change*/
-@media screen and (min-width: 250px){
+
 #photo {
     /*padding-top: 0px;*/
-<<<<<<< HEAD
-=======
 
->>>>>>> 6d661a21538c2b68faa573acdc0551d486fa4e2c
     padding-bottom:350px;
     background-image: url(images/coverphoto.jpg);
-    background-repeat:repeat-x;
-    background-size: 50%;
+    /*background-repeat:repeat-x;
+    background-size: 50%;*/
    background-position:center;
-    border-radius: 50px;
+   border-radius: 50px;
     }
 
-}
+
 .pose-link{
     font-weight: bold;
 }
