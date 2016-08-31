@@ -9,6 +9,12 @@ body {
    
     
 }
+@media screen and (min-width: 500 px)
+{
+    .navlog{
+        justify-content:space-between;
+    }
+}
 
 /*This is a change*/
 @media screen and (max-width: 480px){
