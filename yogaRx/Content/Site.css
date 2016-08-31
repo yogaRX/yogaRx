@@ -9,12 +9,7 @@ body {
    
     
 }
-@media screen and (min-width: 500 px)
-{
-    .navlog{
-        justify-content:space-between;
-    }
-}
+
 
 /*This is a change*/
 @media screen and (max-width: 480px){
@@ -52,10 +47,20 @@ body {
     /*text-decoration: underline;*/
     
 }
-.navhome{
+.navhome, .navhome:link, .navhome:visited{
     font-family:'Nothing You Could Do', cursive !important;
     font-size: 25px;
+    color: #E2d8cc;
+    padding-top: 15px;
+    padding-bottom:5px;
+    padding-left:15px;
+    padding-right:15px;
+    position:relative;
+    top: 6px;
 
+}
+.navhome:hover{
+    text-decoration: none;
 }
 
 #size{
@@ -87,7 +92,7 @@ a:link {
 
 /* visited link */
 a:visited {
-    color: #51503B !important;
+    color: #51503B;
 }
 
  Set padding to keep content from hitting the edges 
@@ -127,9 +132,10 @@ textarea {
 
 .navbar-default {
     background-color: #9C9A81;
-    color: aqua;
+        color: #E2d8cc;
+
 }
-.navbar-default .navbar-nav > li > a  {
+.navbar-nav > li > a  {
     color: #E2d8cc !important;
 }
 
