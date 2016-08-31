@@ -10,18 +10,16 @@ body {
     
 }
 /*This is a change*/
+@media screen and (min-width: 250px){
 #photo {
     /*padding-top: 0px;*/
-    padding-bottom:300px;
+    padding-bottom:350px;
     background-image: url(images/coverphoto.jpg);
     background-repeat:repeat-x;
     background-size: 50%;
-   background-position:top;
-    border-radius: 25px;
-    
-    
-    
-    
+   background-position:center;
+    border-radius: 50px;
+    }
 }
 .frontext{
     color: #8b8173;
@@ -91,19 +89,14 @@ textarea {
 }
 
 
-#headertitle{
+.headertitle{
     font-family:'Nothing You Could Do', cursive;
     font-weight: 600;
     font-size: 75px;
     text-align:center;
    
 }
-#lead {
-    font-family: Verdana;
-    font-size: 20px;
-    text-align:center;
-   
-}
+
 .navbar-default {
     background-color: #9C9A81;
     color: aqua;
@@ -111,10 +104,7 @@ textarea {
 .navbar-default .navbar-nav > li > a  {
     color: #E2d8cc !important;
 }
-/*.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    background-color: #E7E7E7;
-    color: #555555;
-}*/
+
 .justified {
     position:absolute;
     left:75%;
@@ -142,5 +132,11 @@ textarea {
         width:auto;
   
 }
-/*font-family: 'Nothing You Could Do', cursive;
-font-family: 'Palanquin', sans-serif;*/
+
+.paratext{
+    font-family: 'Palanquin', sans-serif;
+    font-size: 16px;
+}
+.paraheader{  font-family: 'Palanquin', sans-serif;
+
+}
