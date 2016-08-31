@@ -18,25 +18,29 @@
         @Html.AntiForgeryToken()
         <div class="form-group">
             @Html.Label(" ", new { @class = "control-label col-md-2" })
+    <br>
             <div class="col-md-10">
                 <input type="file" name="upload" id="Avatar" />
-                <input type="submit"    />
+                <input type="submit"  class="btn btn-secondary"  />
             </div>
         </div> <!-- end Profile Picture -->
         
 
     }
-   
-    
+    <br>
 
-    <h6>Favorites:</h6>
-    <ul>
+    <div align="left">
+    <h3>Favorites:</h3>
+        </div>
+    <div>
+        <ul>
 
-    @foreach (yogaRx.Models.Pose fav in ViewBag.Favorites)
-    {
-      <li> @Html.ActionLink(fav.PoseName, "Details", "Poses", new {id = fav.PoseId}, null)</li>
-    }
+            @foreach (yogaRx.Models.Pose fav in ViewBag.Favorites)
+            {
+                <li> @Html.ActionLink(fav.PoseName, "Details", "Poses", new { id = fav.PoseId }, null)</li>
+            }
         </ul>
+    </div>
     @*<dl class="dl-horizontal">
         <dt>Password:</dt>
         <dd>
