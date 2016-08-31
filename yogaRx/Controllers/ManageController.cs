@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
@@ -120,6 +121,7 @@ namespace yogaRx.Controllers
 
             CurrentUser.Favorites.Add(db.Poses.Find(PoseId));
             db.SaveChanges();
+            System.Threading.Thread.Sleep(1000);
             return RedirectToAction("Details", "Poses", new { id = PoseId });
 
         }
