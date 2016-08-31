@@ -69,11 +69,11 @@
             <div>
                 <div class="form-group" >
                     <div class="btn-group" data-toggle="buttons">
-                        <label class="pdsa-radiobutton btn btn-primary active">
+                        <label class="pdsa-radiobutton btn btn-secondary active">
                             <span class="glyphicon glyphicon-thumbs-up"></span>
                             @Html.RadioButton("SymbolRating", "1", new { htmlAttributes = new { @class = "form-control" } })
                         </label>
-                        <label class="pdsa-radiobutton btn btn-primary">
+                        <label class="pdsa-radiobutton btn btn-secondary">
                             <span class="glyphicon glyphicon-thumbs-down"></span>
                             @Html.RadioButton("SymbolRating", "-1",
               new { htmlAttributes = new { @class = "form-control" } })
@@ -90,7 +90,7 @@
              @*@Html.TextBoxFor(m => m.Poses, new { @class = "form-control" })*@
             <label for="comment">Comment:</label>
             <textarea type="Text" name="TextReview" class="form-control" rows="5" id="comment"></textarea>
-            <input type="submit" />
+           <input class="btn btn-secondary"  type="submit"  /> 
         </div>
 
         

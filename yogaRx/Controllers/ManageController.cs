@@ -120,7 +120,7 @@ namespace yogaRx.Controllers
 
             CurrentUser.Favorites.Add(db.Poses.Find(PoseId));
             db.SaveChanges();
-            return RedirectToAction("Index", "Poses");
+            return RedirectToAction("Details", "Poses", new { id = PoseId });
 
         }
 
