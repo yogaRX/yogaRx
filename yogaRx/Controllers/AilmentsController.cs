@@ -55,6 +55,7 @@ namespace yogaRx.Controllers
 
 
         // GET: Ailments
+        [AllowAnonymous]
         public ActionResult Index(string search)
         
         {
@@ -79,8 +80,9 @@ namespace yogaRx.Controllers
 
 
 
-    
+
         // GET: Ailments/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
