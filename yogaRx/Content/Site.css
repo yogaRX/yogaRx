@@ -145,6 +145,7 @@ textarea {
     font-size:10px;
 }
 .photosize{
+    border-radius: 50px;
     width:100%
 }
 
@@ -181,4 +182,7 @@ textarea {
 }
 .paraheader{  font-family: 'Palanquin', sans-serif;
 
+}
+img.profile{
+    border-radius: 50px;
 }

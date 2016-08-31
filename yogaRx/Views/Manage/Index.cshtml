@@ -10,8 +10,9 @@
 <div>
     @*<h4>Change your account settings</h4>*@
     <hr />
-
-    <img src="~/File?id=@ViewBag.User" width="200"  />
+    <div class="profile">
+    <img src="~/File?id=@ViewBag.User" width="200" />
+    </div>
 
     @using (Html.BeginForm("ProfPhotoChange", "Manage", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
