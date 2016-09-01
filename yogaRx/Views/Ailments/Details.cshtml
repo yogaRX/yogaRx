@@ -52,9 +52,9 @@
     }
  
     Write a comment:
-    @using (Html.BeginForm("PostComment", "Manage","Post" ))
+    @using (Html.BeginForm("PostComment", "Manage", FormMethod.Get))
     {
-        @Html.AntiForgeryToken()
+        @*@Html.AntiForgeryToken()*@
         @Html.Hidden("AilmentId", Model.AilmentId)
         
         <div class="form-group">
@@ -104,7 +104,7 @@
             {
                 if(rating.User != null && rating.Ailment.AilmentName == Model.AilmentName && rating.TextReview != "")
                 {                  
-                         <u><b> @rating.User.UserHandle</b>  said:</u>
+                         <u><b> @rating.User.Email</b>  said:</u>
                             <div class="commentbox">
                                 @rating.TextReview                               
                             </div>                        

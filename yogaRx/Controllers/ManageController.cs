@@ -94,8 +94,8 @@ namespace yogaRx.Controllers
         }
 
         //POST: /ailments/details/comment
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
         public ActionResult PostComment(string TextReview, int PoseList, int AilmentId, short? SymbolRating)
         {
             Rating Comment = new Rating();
